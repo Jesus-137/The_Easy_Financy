@@ -1,5 +1,9 @@
+import HomeView from "../pages/HomeView";
+
 function App() {
-    return ("");
+    return (
+        <HomeView/>
+    );
 }
 
 export default App;
