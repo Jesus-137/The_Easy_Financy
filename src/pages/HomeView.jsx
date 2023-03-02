@@ -1,4 +1,4 @@
-import Header from "../components/molecules/Header";
+import Header from "../components/molecules/HeaderLink";
 import Content from "../components/organims/Content";
 import Footer from "../components/molecules/Footer";
 

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import '../../assets/style/Parafo.css'
 
 const StyledH3 = styled.h3`
     font-family: 'Raleway', Arial, Helvetica, sans-serif;

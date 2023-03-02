@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import '../../assets/style/SubTitle.css'
 
 const StyledH2 = styled.h2`
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
