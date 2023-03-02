@@ -13,8 +13,8 @@ const COLORS = ['#ce93d8', '#5c6bc0', '#b39ddb', '#4dd0e1', '#f48fb1', '#d500f9'
 
 const Grahp = () => {
   return (
-    // <div style={{ width: '100%', height: 400}}>
-        <ResponsiveContainer width= '100%' height={400}>
+    <div style={{ width: '50%', height: 200, padding: '2%'}}>
+        <ResponsiveContainer>
             <PieChart>
                 <Pie
                     dataKey="value" 
@@ -31,7 +31,7 @@ const Grahp = () => {
             </PieChart>
 
         </ResponsiveContainer>
-    // </div>
+    </div>
   )
 }
 

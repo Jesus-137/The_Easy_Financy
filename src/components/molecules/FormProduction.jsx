@@ -3,11 +3,16 @@ import Input from '../atoms/Input';
 import Boton from '../atoms/Boton';
 
 const StyledForm = styled.form`
-
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 30%;
+    padding: 2%;
 `;
 
 
-function FromProducto() {
+function FormProducto() {
     return (
         <StyledForm>
             <Input data={"Nombre del producto"} type={"text"} name={"NombreP"}/>
@@ -20,4 +25,4 @@ function FromProducto() {
     );
 }
 
-export default FromProducto;
+export default FormProducto;
