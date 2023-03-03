@@ -5,8 +5,7 @@ const StyledH3 = styled.h3`
     font-weight: lighter;
     font-variant: small-caps;
     text-align: justify;
-    font-size: 124%;
-    line-height: 128%;
+    font-size: 1rem;
 `;
 
 function Parrafo({msn}) {

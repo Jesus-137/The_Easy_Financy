@@ -5,12 +5,11 @@ import Imagen from '../../assets/img/TEF.png';
 
 const StyledHeader = styled.header`
     position:static;
-    width: 95%;
-    padding: 1% 4% 2% 1%;
+    width: 100%;
     background-color: rgba(93, 106, 191, 0.87);
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     color:white;
 `;

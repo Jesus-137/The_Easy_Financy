@@ -6,9 +6,9 @@ const StyledForm = styled.form`
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-content: center;
-    width: 30%;
-    padding: 2%;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 `;
 
 

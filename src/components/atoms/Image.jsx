@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledIMG = styled.img`
-    margin-top: 16%;
+    margin-top: 8%;
     width: 50%;
     height: 250%;
 `;

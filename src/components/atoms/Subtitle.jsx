@@ -5,8 +5,7 @@ const StyledH2 = styled.h2`
     font-variant: all-small-caps;
     font-style: normal;
     text-align: center;
-    font-size: 140%;
-    line-height: 136%;
+    font-size: 1.5rem;
 `;
 
 function SubTitle({subTitle}) {

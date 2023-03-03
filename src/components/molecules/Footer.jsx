@@ -15,6 +15,7 @@ const StyledFooter = styled.footer`
     border-top: 5px dashed #000000;
     display: flex;
     flex-direction: column;
+    clip-path: polygon( 0% 100%,0% 7%,6% 3%,9% 2%,13% 2%,18% 4%,23% 6%,29% 7%,32% 7%,38% 3%,41% 2%,45% 2%,50% 4%,55% 6%,61% 7%,67% 7%,73% 3%,76% 2%,80% 2%,85% 4%,90% 6%,96% 7%, 99% 7%, 100% 7%, 100% 100% );
     .Nosotros{
         margin: 0 3% ;
         border-top: 5px dashed #000000;

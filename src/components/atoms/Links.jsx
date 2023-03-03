@@ -3,10 +3,10 @@ import styled from 'styled-components';
 const StyledLink = styled.a`
     font-family: 'Raleway';
     font-style: normal;
-    font-size: 141%;
-    line-height: 136%;
+    font-size: 1.5rem;
     text-decoration-line: underline;
     font-variant: all-small-caps;
+    color: ;
 `;
 
 
