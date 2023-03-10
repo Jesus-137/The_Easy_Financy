@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Grahp from "../components/atoms/Grahp";
 import Header from "../components/molecules/HeaderNoLink.jsx";
 import FormProducto from "../components/molecules/FormProduction";
-import Links from '../components/atoms/Links';
+import StyledLink from '../components/atoms/LinkHeader';
 
 const Div = styled.div`
     display: flex;
@@ -16,6 +16,12 @@ const Div = styled.div`
         flex-direction: row;
         justify-content: space-around;
         text-align: center;
+        width: 100%;
+    }
+    .grahp{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .from{
         width: 60%;
@@ -42,11 +48,11 @@ function Dashboard() {
                 <div className='from'>
                     <FormProducto/>
                 </div>
-                <div style={{width: "40%", height: 460}}>
+                <div className='grahp' style={{width: "40%", height: 460}}>
                     <div className='link'>
-                        <Links link={"por dia"} direction={"/grafica"}/>
-                        <Links link={"por mes"} direction={"/grafica"}/>
-                        <Links link={"por año"} direction={"/grafica"}/>
+                        <StyledLink to={"/grafica"}>por dia</StyledLink>
+                        <StyledLink to={"/grafica"}>por mes</StyledLink>
+                        <StyledLink to={"/grafica"}>por año</StyledLink>
                     </div>
                     <Grahp data={data} COLORS={COLORS}/>
                     <Grahp data={data} COLORS={COLORS}/>

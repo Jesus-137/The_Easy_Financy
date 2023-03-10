@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Title from '../atoms/Title';
 import Logo from '../atoms/Logo';
-import Links from '../atoms/Links';
+import StyledLink from '../atoms/LinkHeader';
 import Imagen from '../../assets/img/TEF.png';
 
 const StyledHeader = styled.header`
@@ -15,17 +15,16 @@ const StyledHeader = styled.header`
     align-items: center;
     color:white;
     .LogoTEF{
-        width: 40%;
+        width: 26%;
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-    }
-    .TEF{
-        display: flex;
-        flex-direction: column;
         justify-content: space-between;
-        align-items: flex-start;
+    }
+    .link{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 21%;
     }
 `;
 
@@ -35,14 +34,13 @@ function Header() {
         <StyledHeader>
             <div className='LogoTEF'>
                 <Logo img={Imagen}/>
-                <div className='TEF'>
-                    <Title title={'The'}/>
-                    <Title title={'EasyFinancy'}/>
-                </div>
+                <Title title={'The EasyFinancy'}/>
             </div>
             <Title title={"Home"}/>
-            <Links link={"Iniciar sesión"} direction={"/iniciar"} />
-            <Links link={"Registrar"} direction={"/crear"}/>
+            <div className='link'>
+                <StyledLink to={"/iniciar"}>Iniciar sesión</StyledLink>
+                <StyledLink to={"/crear"}>Registrar</StyledLink>
+            </div>
         </StyledHeader>
     );
 }

@@ -8,17 +8,27 @@ import Title from "../atoms/Title";
 import Boton from "../atoms/Boton";
 import Parrafo from "../atoms/Parrafo";
 import logo from "../../assets/img/TEF.png";
+import StyledLink from "../atoms/Link";
 
 const Div = styled.div`
-    width: 50%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 45%;
+    border: 3px dashed #595F81;
+    margin-top: 10%;
+    text-align: center;
+    font-size: 1.5rem;
+    padding-bottom: 1%;
     .header{
         display: flex;
         flex-direction: row;
+        justify-content: space-between;
         justify-items: center;
         text-align: center;
-        padding: 1%;
-        margin: 10% 0%;
-        width: 100%;
+        margin-bottom: 7%;
+        padding-right: 30%;
+        width: 69.9%;
         border-bottom: 5px dashed;
     }
 `;
@@ -38,42 +48,44 @@ function FromLogin() {
         }else if(newForm.get('contrasenia')==''){
             setState('El campo contraseña no puede estar vacio')
         }else{
-            // fetch('http://localhost:8080/user/getAll')
-            // .then(response=>response.json())
-            // .then(data=>{
-            //     setState(JSON.stringify(data))
-            //     const usuarios=data
-            //     let i=0;
-            //     let encontrado=false
-            //     while(!encontrado&&i<usuarios.length){
-            //         if (usuarios[i].nombre_usuario==newForm.get('usuario')){
-            //             if(usuarios[i].contrasenia==newForm.get('contrasenia')){
-            //                 encontrado=true
-            //                 navigate('/grafica')
-            //             }
-            //         }
-            //         i++;
-            //     }
-            //     if (!encontrado){
-            //         setState('Usuario no encontrado verifique los campos')
-            //     }
-            // })
-            navigate("/grafica")
+            fetch('http://localhost:8080/user/getAll')
+            .then(response=>response.json())
+            .then(data=>{
+                const usuarios=data
+                let i=0;
+                let encontrado=false
+                while(!encontrado&&i<usuarios.length){
+                    if (usuarios[i].nombre_usuario==newForm.get('usuario')){
+                        if(usuarios[i].contrasenia==newForm.get('contrasenia')){
+                            encontrado=true
+                            navigate('/grafica')
+                        }
+                    }
+                    i++;
+                }
+                if(!encontrado){
+                    setState('usuario no encontrado')
+                }
+            })
+            // navigate('/grafica')
         }
     }
     return (
-        <Div>
-            <div className="header">
-                <Logo img={logo}/>
-                <Title title={"Iniciar sesion"}/>
-            </div>
-            <form ref={form}>
-                <Input type={"text"} name={"usuario"} data={"Nombre de usuario"}/>
-                <Input type={"text"} name={"contrasenia"} data={"Contraseña"}/>
-                <Boton onClick={chandlerClick} data={"Iniciar"}/>
-            </form>
+        <>
+            <Div>
+                <div className="header">
+                    <Logo img={logo}/>
+                    <Title title={"Iniciar sesion"}/>
+                </div>
+                <form ref={form}>
+                    <Input type={"email"} name={"usuario"} data={"Ingrese su correo"}/>
+                    <Input type={"text"} name={"contrasenia"} data={"Contraseña"}/>
+                    <Boton onClick={chandlerClick} data={"Aceptar"}/>
+                    <StyledLink to={"/"}>Cancelarx</StyledLink>
+                </form>
+            </Div>
             <Parrafo msn={state}/>
-        </Div>
+        </>
     );
 }
 

@@ -1,8 +1,13 @@
 import { PieChart, ResponsiveContainer, Pie, Tooltip, Cell } from 'recharts'
+import styled from 'styled-components';
+
+const Div = styled.div`
+  padding: 20%;
+`;
 
 const Grahp = ({data, COLORS}) => {
   return (
-    <div style={{ width: '50%', height: 200, padding: '2%'}}>
+    <Div style={{ width: '50%', height: 200, padding: '2%'}}>
       <ResponsiveContainer>
         <PieChart>
             <Pie
@@ -19,7 +24,7 @@ const Grahp = ({data, COLORS}) => {
             <Tooltip/>
         </PieChart>
       </ResponsiveContainer>
-    </div>
+    </Div>
   )
 }
 

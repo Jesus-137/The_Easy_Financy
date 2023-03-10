@@ -6,7 +6,6 @@ const StyledH1 = styled.h1`
     font-size: 1.8rem;
     font-variant: small-caps;
     text-align: center;
-    width: 100%;
 `;
 
 function Title({title}) {

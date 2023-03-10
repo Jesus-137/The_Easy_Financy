@@ -5,7 +5,8 @@ const Button = styled.button`
     margin-top:2%;
     border-radius: 20px;
     background-color: #c182e9;
-    border: 0px;
+    border: 0;
+    height: 30px;
 `;
 
 function Boton({data, onClick}) {

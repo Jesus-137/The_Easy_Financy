@@ -5,11 +5,15 @@ const Div = styled.div`
     flex-direction: column;
     justify-content: space-between;
     text-align: start;
+    flex-wrap: wrap;
     width: 100%;
     margin-top: 2%;
-    height: 45px;
+    height: 70px;
+    font-size: 1.5rem;
     .inpunt{
         border-radius: 5px;
+        height: 35%;
+        border-radius: 10px;
     }
 `;
 

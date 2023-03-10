@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Title from "../atoms/Title";
-import Logo from "../atoms/Logo";
+import Logo from "../atoms/LogoRed";
 import SubTitle from "../atoms/Subtitle";
 import Parrafo from "../atoms/Parrafo";
 import Facebook from "../../assets/img/Facebook.svg";
@@ -15,7 +15,7 @@ const StyledFooter = styled.footer`
     border-top: 5px dashed #000000;
     display: flex;
     flex-direction: column;
-    clip-path: polygon( 0% 100%,0% 7%,6% 3%,9% 2%,13% 2%,18% 4%,23% 6%,29% 7%,32% 7%,38% 3%,41% 2%,45% 2%,50% 4%,55% 6%,61% 7%,67% 7%,73% 3%,76% 2%,80% 2%,85% 4%,90% 6%,96% 7%, 99% 7%, 100% 7%, 100% 100% );
+    align-items: center;
     .Nosotros{
         margin: 0 3% ;
         border-top: 5px dashed #000000;
@@ -25,6 +25,7 @@ const StyledFooter = styled.footer`
         display: flex;
         flex-direction: row;
         justify-content: center;
+        width: 20%;
     }
 `;
 
@@ -34,10 +35,10 @@ function Footer() {
         <StyledFooter>
             <Title title={"Nuestras redes sociales"}/>
             <div className="redes">
-                <Logo img={Facebook}/>
-                <Logo img={Twitter}/>
-                <Logo img={Instagram}/>
-                <Logo img={Gmail}/>
+                <Logo link={"https://www.google.com.mx/"} img={Facebook}/>
+                <Logo link={""} img={Twitter}/>
+                <Logo link={""} img={Instagram}/>
+                <Logo link={""} img={Gmail}/>
             </div>
             <div className="Nosotros">
                 <SubTitle subTitle={"Sobre nosotros"}/>
