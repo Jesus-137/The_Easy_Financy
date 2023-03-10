@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Header from "../components/molecules/HeaderNoLink";
+import HeaderS from "../components/molecules/HeaderStatic";
 import ContentVenta from "../components/organims/ContentVenta";
 
 const Div = styled.div`
@@ -11,7 +11,7 @@ const Div = styled.div`
 function Ventas() {
     return (
         <Div>
-            <Header title={"Ventas"}/>
+            <HeaderS title={"Ventas"}/>
             <ContentVenta/>
         </Div>
     );

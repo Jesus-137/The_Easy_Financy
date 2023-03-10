@@ -4,14 +4,12 @@ const Div = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    text-align: start;
     flex-wrap: wrap;
+    text-align: start;
     width: 100%;
-    margin-top: 2%;
     height: 70px;
     font-size: 1.5rem;
     .inpunt{
-        border-radius: 5px;
         height: 35%;
         border-radius: 10px;
     }

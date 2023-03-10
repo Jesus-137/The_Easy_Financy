@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const StyledLink = styled(Link)`
+const StyledLinkW = styled(Link)`
     font-family: 'Raleway';
     font-style: normal;
     font-size: 1.5rem;
@@ -10,4 +10,4 @@ const StyledLink = styled(Link)`
     color: white;
 `;
 
-export default StyledLink;
+export default StyledLinkW;

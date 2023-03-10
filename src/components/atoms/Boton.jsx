@@ -9,9 +9,9 @@ const Button = styled.button`
     height: 30px;
 `;
 
-function Boton({data, onClick}) {
+function Boton({data, onClick, type}) {
     return (
-        <Button onClick={onClick}>{data}</Button>
+        <Button type={type} onClick={onClick}>{data}</Button>
     );
 }
 

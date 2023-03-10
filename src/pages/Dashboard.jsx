@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import Grahp from "../components/atoms/Grahp";
-import Header from "../components/molecules/HeaderNoLink.jsx";
+import HeaderS from '../components/molecules/HeaderStatic';
 import FormProducto from "../components/molecules/FormProduction";
-import StyledLink from '../components/atoms/LinkHeader';
+import StyledLink from '../components/atoms/LinkWhite';
+import Footer from '../components/molecules/Footer';
 
 const Div = styled.div`
     display: flex;
@@ -43,7 +44,7 @@ const COLORS = ['#ce93d8', '#5c6bc0', '#b45151', '#153438', '#a4848f', '#00f9890
 function Dashboard() {
     return (
         <>
-            <Header title={"Dashboard"}/>
+            <HeaderS title={"Dashboard"}/>
             <Div>
                 <div className='from'>
                     <FormProducto/>
@@ -58,6 +59,7 @@ function Dashboard() {
                     <Grahp data={data} COLORS={COLORS}/>
                 </div>
             </Div>
+            <Footer/>
         </>
     );
 }

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import Title from '../atoms/Title';
 import Logo from '../atoms/Logo';
-import StyledLink from '../atoms/LinkHeader';
 import Imagen from '../../assets/img/TEF.png';
 
 const StyledHeader = styled.header`
@@ -24,12 +23,12 @@ const StyledHeader = styled.header`
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        width: 21%;
+        width: 23%;
     }
 `;
 
 
-function Header() {
+function HeaderF({links}) {
     return (
         <StyledHeader>
             <div className='LogoTEF'>
@@ -38,11 +37,10 @@ function Header() {
             </div>
             <Title title={"Home"}/>
             <div className='link'>
-                <StyledLink to={"/iniciar"}>Iniciar sesión</StyledLink>
-                <StyledLink to={"/crear"}>Registrar</StyledLink>
+                {links}
             </div>
         </StyledHeader>
     );
 }
 
-export default Header;
+export default HeaderF;
