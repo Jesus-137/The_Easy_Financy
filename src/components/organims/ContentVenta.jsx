@@ -19,7 +19,7 @@ const data = [
     { name: 'Group F', value: 4800 },
 ]
 
-const COLORS = ['#ce93d8', '#5c6bc0', '#b45151', '#153438', '#a4848f', '#00f9890']
+const COLORS = ['#00FFB2', '#F54B4B', '#010846', '#FBA600', '#E56E00', '#4C0297']
 
 function ContentVenta() {
     return (

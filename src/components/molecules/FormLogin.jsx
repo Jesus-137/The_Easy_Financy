@@ -78,10 +78,10 @@ function FromLogin() {
                     <Title title={"Iniciar sesion"}/>
                 </div>
                 <form ref={form}>
-                    <Input type={"email"} name={"usuario"} data={"Ingrese su correo"}/>
-                    <Input type={"text"} name={"contrasenia"} data={"Contraseña"}/>
+                    <Input type={"text"} name={"usuario"} data={"Nombre de usuario"}/>
+                    <Input type={"password"} name={"contrasenia"} data={"Contraseña"}/>
                     <Boton onClick={chandlerClick} data={"Aceptar"}/>
-                    <StyledLink to={"/"}>Cancelarx</StyledLink>
+                    <StyledLink to={"/"}>Cancelar</StyledLink>
                 </form>
             </Div>
             <Parrafo msn={state}/>

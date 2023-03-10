@@ -2,6 +2,7 @@ import { BrowserRouter,Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import HomeView from "../pages/HomeView";
 import Login from "../pages/Login";
+import Register from "../pages/Register";
 import Dashboard from "../pages/Dashboard";
 import Ventas from "../pages/Ventas";
 import PageUseless from "../pages/PageUseless";
@@ -16,7 +17,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<HomeView/>}/>
                     <Route path="/iniciar" element={<Login/>}/>
-                    <Route path="/crear" element={<PageUseless/>}/>
+                    <Route path="/crear" element={<Register/>}/>
                     <Route path="/grafica" element={<Dashboard/>}/>
                     <Route path="/venta" element={<Ventas/>}/>
                     <Route path="/*" element={<NotFound/>}/>
