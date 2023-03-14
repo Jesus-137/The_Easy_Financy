@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router";
+import { useContext } from "react";
 import styled from 'styled-components';
 import UserContext from "../../context/UserContext";
 import Logo from "../atoms/Logo";
@@ -9,6 +10,7 @@ import Boton from "../atoms/Boton";
 import Parrafo from "../atoms/Parrafo";
 import logo from "../../assets/img/TEF.png";
 import StyledLink from "../atoms/Link";
+import RecuperarCuenta from "../../pages/RecuperarCuenta";
 
 const Div = styled.div`
     display: flex;
@@ -35,7 +37,7 @@ const Div = styled.div`
 
 
 function FromLogin() {
-    const {isLoged, setIsLoged} = UserContext;
+    const {isLoged, setIsLoged} = useContext(UserContext);
     const form= useRef();
     const navigate=useNavigate();
     const [state, setState]=useState([]);
@@ -54,9 +56,11 @@ function FromLogin() {
                 const usuarios=data
                 let i=0;
                 let encontrado=false
+                alert(usuarios[i].nombre_usuario)
                 while(!encontrado&&i<usuarios.length){
                     if (usuarios[i].nombre_usuario==newForm.get('usuario')){
                         if(usuarios[i].contrasenia==newForm.get('contrasenia')){
+                            setIsLoged(true)
                             encontrado=true
                             navigate('/grafica')
                         }
@@ -81,6 +85,7 @@ function FromLogin() {
                     <Input type={"text"} name={"usuario"} data={"Nombre de usuario"}/>
                     <Input type={"password"} name={"contrasenia"} data={"Contraseña"}/>
                     <Boton onClick={chandlerClick} data={"Aceptar"}/>
+                    <StyledLink to={"/recuperar"}><Boton data={"RecuperarCuenta"}/></StyledLink>
                     <StyledLink to={"/"}>Cancelar</StyledLink>
                 </form>
             </Div>

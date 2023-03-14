@@ -7,6 +7,11 @@ const Button = styled.button`
     background-color: #c182e9;
     border: 0;
     height: 30px;
+    font-family: 'Raleway', Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-variant: small-caps;
+    text-align: center;
+    font-size: 1rem;
 `;
 
 function Boton({data, onClick, type}) {

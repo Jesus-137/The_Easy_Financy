@@ -12,7 +12,6 @@ const StyledFooter = styled.footer`
     background-color: rgba(93, 106, 191, 0.87);
     margin-top: 5%;
     padding-bottom: 1%;
-    border-top: 5px dashed #000000;
     display: flex;
     flex-direction: column;
     align-items: center;

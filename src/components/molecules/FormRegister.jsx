@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef, useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import Input from '../atoms/Input';
@@ -8,6 +8,7 @@ import Boton from '../atoms/Boton';
 import Parrafo from '../atoms/Parrafo';
 import logo from '../../assets/img/TEF.png';
 import StyledLink from '../atoms/Link';
+import UserContext from '../../context/UserContext';
 
 const Div = styled.div`
     display: flex;
@@ -34,6 +35,7 @@ const Div = styled.div`
 
 
 function FromRegister() {
+    const {isLoged, setIsLoged} = useContext(UserContext);
     const form= useRef();
     const navigate=useNavigate();
     const [state, setState]=useState([]);
@@ -50,7 +52,7 @@ function FromRegister() {
             body:JSON.stringify({
                 contrasenia:newForm.get('contrasenia'),
                 email:newForm.get('email'),
-                firstName: newForm.get('Primer nombre'),
+                first_name: newForm.get('Primer nombre'),
                 nombre_usuario:newForm.get('usuario')
             })
         }
@@ -69,6 +71,7 @@ function FromRegister() {
             .then(response => response.json())
             .then(data => {
                 if (data.status!=false){
+                    setIsLoged(true)
                     navigate('/grafica')
                 }else{
                     alert(data.message)
