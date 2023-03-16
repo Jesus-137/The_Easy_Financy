@@ -4,6 +4,7 @@ import HomeView from "../pages/HomeView";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import RecuperarCuenta from "../pages/RecuperarCuenta";
+import CorreoMandado from "../pages/CoreoMandado";
 import Dashboard from "../pages/Dashboard";
 import Ventas from "../pages/Ventas";
 import NotFound from "../pages/NotFound";
@@ -20,6 +21,7 @@ function App() {
                     <Route path="/iniciar" element={<Login/>}/>
                     <Route path="/crear" element={<Register/>}/>
                     <Route path="/recuperar" element={<RecuperarCuenta/>}/>
+                    <Route path="/correo" element={<CorreoMandado/>}/>
                     <Route element={<RouteProtected session={isLoged}/>}>
                         <Route path="/grafica" element={<Dashboard/>}/>
                         <Route path="/venta" element={<Ventas/>}/>

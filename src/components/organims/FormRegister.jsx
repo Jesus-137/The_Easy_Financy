@@ -1,14 +1,12 @@
 import { useRef, useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import UserContext from '../../context/UserContext';
+import StyledLink from '../atoms/Link';
 import Input from '../atoms/Input';
-import Logo from '../atoms/Logo';
-import Title from '../atoms/Title';
 import Boton from '../atoms/Boton';
 import Parrafo from '../atoms/Parrafo';
-import logo from '../../assets/img/TEF.png';
-import StyledLink from '../atoms/Link';
-import UserContext from '../../context/UserContext';
+import HeaderForm from '../molecules/HeaderForm';
 
 const Div = styled.div`
     display: flex;
@@ -20,19 +18,7 @@ const Div = styled.div`
     text-align: center;
     font-size: 1.5rem;
     padding-bottom: 1%;
-    .header{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        justify-items: center;
-        text-align: center;
-        margin-bottom: 7%;
-        padding-right: 30%;
-        width: 69.9%;
-        border-bottom: 5px dashed;
-    }
 `;
-
 
 function FromRegister() {
     const {isLoged, setIsLoged} = useContext(UserContext);
@@ -83,10 +69,7 @@ function FromRegister() {
     return (
         <>
             <Div>
-                <div className="header">
-                    <Logo img={logo}/>
-                    <Title title={"Crear Cuenta"}/>
-                </div>
+                <HeaderForm name={"Crear cuenta"}/>
                 <form ref={form}>
                     <Input type={"text"} name={"nombre"} data={"Primer nombre"}/>
                     <Input type={"email"} name={"email"} data={"Correo electronico"}/>

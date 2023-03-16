@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import FromRegister from "../components/molecules/FormRegister";
+import FromRegister from "../components/organims/FormRegister";
 
 const Div = styled.div`
     display: flex;

@@ -3,14 +3,11 @@ import { useNavigate } from "react-router";
 import { useContext } from "react";
 import styled from 'styled-components';
 import UserContext from "../../context/UserContext";
-import Logo from "../atoms/Logo";
+import StyledLink from "../atoms/Link";
 import Input from "../atoms/Input";
-import Title from "../atoms/Title";
 import Boton from "../atoms/Boton";
 import Parrafo from "../atoms/Parrafo";
-import logo from "../../assets/img/TEF.png";
-import StyledLink from "../atoms/Link";
-import RecuperarCuenta from "../../pages/RecuperarCuenta";
+import HeaderForm from "../molecules/HeaderForm";
 
 const Div = styled.div`
     display: flex;
@@ -22,17 +19,6 @@ const Div = styled.div`
     text-align: center;
     font-size: 1.5rem;
     padding-bottom: 1%;
-    .header{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        justify-items: center;
-        text-align: center;
-        margin-bottom: 7%;
-        padding-right: 30%;
-        width: 69.9%;
-        border-bottom: 5px dashed;
-    }
 `;
 
 
@@ -77,10 +63,7 @@ function FromLogin() {
     return (
         <>
             <Div>
-                <div className="header">
-                    <Logo img={logo}/>
-                    <Title title={"Iniciar sesion"}/>
-                </div>
+                <HeaderForm name={"Iniciar secion"}/>
                 <form ref={form}>
                     <Input type={"text"} name={"usuario"} data={"Nombre de usuario"}/>
                     <Input type={"password"} name={"contrasenia"} data={"Contraseña"}/>

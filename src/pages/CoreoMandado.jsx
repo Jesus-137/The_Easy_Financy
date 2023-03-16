@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import FormRecuperar from '../components/organims/FormRecuperar';
+import FormCorreo from '../components/organims/FormCorreo';
 
 const Div = styled.div`
     display: flex;
@@ -8,13 +8,12 @@ const Div = styled.div`
     align-items: center;
 `;
 
-
-function RecuperarCuenta() {
+function CorreoMandado() {
     return (
         <Div>
-            <FormRecuperar/>
+            <FormCorreo/>
         </Div>
     );
 }
 
-export default RecuperarCuenta;
+export default CorreoMandado;

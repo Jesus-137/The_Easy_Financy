@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import FromLogin from "../components/molecules/FormLogin";
+import FromLogin from '../components/organims/FormLogin';
 
 const Div = styled.div`
     display: flex;
