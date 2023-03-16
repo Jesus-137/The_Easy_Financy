@@ -34,10 +34,10 @@ function Footer() {
         <StyledFooter>
             <Title title={"Nuestras redes sociales"}/>
             <div className="redes">
-                <Logo link={"https://www.google.com.mx/"} img={Facebook}/>
-                <Logo link={""} img={Twitter}/>
-                <Logo link={""} img={Instagram}/>
-                <Logo link={""} img={Gmail}/>
+                <Logo link={"https://www.facebook.com/"} img={Facebook}/>
+                <Logo link={"https://twitter.com/"} img={Twitter}/>
+                <Logo link={"https://www.instagram.com/"} img={Instagram}/>
+                <Logo link={"https://mail.google.com/mail/u/0/?tab=rm#inbox"} img={Gmail}/>
             </div>
             <div className="Nosotros">
                 <SubTitle subTitle={"Sobre nosotros"}/>

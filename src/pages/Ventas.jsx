@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import HeaderS from "../components/molecules/HeaderStatic";
 import ContentVenta from "../components/organims/ContentVenta";
+import StyledLink from "../components/atoms/Link";
 
 const Div = styled.div`
     display: flex;
@@ -11,7 +12,9 @@ const Div = styled.div`
 function Ventas() {
     return (
         <Div>
-            <HeaderS title={"Ventas"}/>
+            <HeaderS title={"Ventas"} links={
+                <StyledLink to={'/pagos'}>Pagos</StyledLink>
+            }/>
             <ContentVenta/>
         </Div>
     );

@@ -7,6 +7,7 @@ import RecuperarCuenta from "../pages/RecuperarCuenta";
 import CorreoMandado from "../pages/CoreoMandado";
 import Dashboard from "../pages/Dashboard";
 import Ventas from "../pages/Ventas";
+import Pagos from "../pages/Pagos";
 import NotFound from "../pages/NotFound";
 import UserContext from "../context/UserContext";
 import RouteProtected from "./RouterProtected";
@@ -26,6 +27,7 @@ function App() {
                         <Route path="/grafica" element={<Dashboard/>}/>
                         <Route path="/venta" element={<Ventas/>}/>
                     </Route>
+                    <Route path="/pagos" element={<Pagos/>}/>
                     <Route path="/*" element={<NotFound/>}/>
                 </Routes>
             </UserContext.Provider>

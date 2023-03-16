@@ -36,28 +36,29 @@ function FromLogin() {
         }else if(newForm.get('contrasenia')==''){
             setState('El campo contraseña no puede estar vacio')
         }else{
-            fetch('http://localhost:8080/user/getAll')
-            .then(response=>response.json())
-            .then(data=>{
-                const usuarios=data
-                let i=0;
-                let encontrado=false
-                alert(usuarios[i].nombre_usuario)
-                while(!encontrado&&i<usuarios.length){
-                    if (usuarios[i].nombre_usuario==newForm.get('usuario')){
-                        if(usuarios[i].contrasenia==newForm.get('contrasenia')){
-                            setIsLoged(true)
-                            encontrado=true
-                            navigate('/grafica')
-                        }
-                    }
-                    i++;
-                }
-                if(!encontrado){
-                    setState('usuario no encontrado')
-                }
-            })
-            // navigate('/grafica')
+            // fetch('http://localhost:8080/user/getAll')
+            // .then(response=>response.json())
+            // .then(data=>{
+            //     const usuarios=data
+            //     let i=0;
+            //     let encontrado=false
+            //     alert(usuarios[i].nombre_usuario)
+            //     while(!encontrado&&i<usuarios.length){
+            //         if (usuarios[i].nombre_usuario==newForm.get('usuario')){
+            //             if(usuarios[i].contrasenia==newForm.get('contrasenia')){
+            //                 setIsLoged(true)
+            //                 encontrado=true
+            //                 navigate('/grafica')
+            //             }
+            //         }
+            //         i++;
+            //     }
+            //     if(!encontrado){
+            //         setState('usuario no encontrado')
+            //     }
+            // })
+            setIsLoged(true)
+            navigate('/grafica')
         }
     }
     return (
