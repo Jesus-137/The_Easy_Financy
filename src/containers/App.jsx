@@ -1,5 +1,7 @@
 import { BrowserRouter,Routes, Route } from "react-router-dom";
 import { useState } from "react";
+import RouteProtected from "./RouterProtected";
+import UserContext from "../context/UserContext";
 import HomeView from "../pages/HomeView";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
@@ -7,10 +9,10 @@ import RecuperarCuenta from "../pages/RecuperarCuenta";
 import CorreoMandado from "../pages/CoreoMandado";
 import Dashboard from "../pages/Dashboard";
 import Ventas from "../pages/Ventas";
+import Metas from "../pages/Metas";
 import Pagos from "../pages/Pagos";
 import NotFound from "../pages/NotFound";
-import UserContext from "../context/UserContext";
-import RouteProtected from "./RouterProtected";
+import PageUseless from "../pages/PageUseless";
 
 function App() {
     const [isLoged, setIsLoged] = useState(false)
@@ -26,8 +28,10 @@ function App() {
                     <Route element={<RouteProtected session={isLoged}/>}>
                         <Route path="/grafica" element={<Dashboard/>}/>
                         <Route path="/venta" element={<Ventas/>}/>
+                        <Route path="/meta" element={<Metas/>}/>
+                        <Route path="/pagos" element={<Pagos/>}/>
                     </Route>
-                    <Route path="/pagos" element={<Pagos/>}/>
+                    <Route path="/construccion" element={<PageUseless/>}/>
                     <Route path="/*" element={<NotFound/>}/>
                 </Routes>
             </UserContext.Provider>

@@ -1,16 +1,15 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
-const StiledLink = styled(Link)`
+const StiledLink = styled.a`
     width: 20%;
     margin-right: 5%;
     height: 50%;
 `;
 
-function LogoRed({link, img, description}) {
+function LogoRed({link, text, img, description}) {
     return (
-        <StiledLink to={link}>
-            <img src={img} alt={description} />
+        <StiledLink href={link}>
+            <p onClick={()=> {navigator.clipboard.writeText(text)}}><img src={img} alt={description}/></p>
         </StiledLink>
     );
 }

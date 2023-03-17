@@ -15,7 +15,7 @@ const Div = styled.div`
     flex-direction: column;
     width: 45%;
     border: 3px dashed #595F81;
-    margin-top: 10%;
+    margin-top: 7%;
     text-align: center;
     font-size: 1.5rem;
     padding-bottom: 1%;
@@ -68,6 +68,7 @@ function FromLogin() {
                 <form ref={form}>
                     <Input type={"text"} name={"usuario"} data={"Nombre de usuario"}/>
                     <Input type={"password"} name={"contrasenia"} data={"Contraseña"}/>
+                    <StyledLink to={"/crear"}><Boton data={"¿No tienes cuenta? cree una cuenta"}/></StyledLink>
                     <Boton onClick={chandlerClick} data={"Aceptar"}/>
                     <StyledLink to={"/recuperar"}><Boton data={"RecuperarCuenta"}/></StyledLink>
                     <StyledLink to={"/"}>Cancelar</StyledLink>

@@ -37,7 +37,7 @@ function Footer() {
                 <Logo link={"https://www.facebook.com/"} img={Facebook}/>
                 <Logo link={"https://twitter.com/"} img={Twitter}/>
                 <Logo link={"https://www.instagram.com/"} img={Instagram}/>
-                <Logo link={"https://mail.google.com/mail/u/0/?tab=rm#inbox"} img={Gmail}/>
+                <Logo text={'221225@gmail.com'} img={Gmail}/>
             </div>
             <div className="Nosotros">
                 <SubTitle subTitle={"Sobre nosotros"}/>

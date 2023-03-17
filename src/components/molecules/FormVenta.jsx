@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Input from "../atoms/Input";
 import Boton from "../atoms/Boton";
 import Parrafo from "../atoms/Parrafo";
+import StyledLink from "../atoms/Link";
 
 const StyledForm = styled.form`
     display: flex;
@@ -36,6 +37,9 @@ function FormVenta() {
             <Input data={"Ventas por mes"} type={"number"} name={"ventas"}/>
             <Input data={"Mes"} type={"number"} name={"mes"}/>
             <Boton type={"button"} onClick={handlerClick} data={"Registrar"}/>
+            <StyledLink to={"/grafica"}>
+                <Boton data={"Dasboard"}/>
+            </StyledLink>
             <Parrafo msn={state}/>
         </StyledForm>
     );

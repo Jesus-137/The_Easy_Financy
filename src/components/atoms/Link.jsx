@@ -8,6 +8,7 @@ const StyledLink = styled(Link)`
     text-decoration-line: underline;
     font-variant: all-small-caps;
     color: #525252;
+    width: 100%;
 `;
 
 export default StyledLink;

@@ -4,7 +4,7 @@ const Button = styled.button`
     width: 100%;
     margin-top:2%;
     border-radius: 20px;
-    background-color: #c182e9;
+    background-color: #9ca9ff;
     border: 0;
     height: 30px;
     font-family: 'Raleway', Arial, Helvetica, sans-serif;

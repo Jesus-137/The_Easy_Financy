@@ -8,12 +8,8 @@ const Div = styled.div`
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 2%;
-    .from{
-        width: 50%;
-        margin-top: 2%;
-    }
+    justify-content: space-around;
+    padding: 2% 0;
 `;
 
 function Dashboard() {
@@ -21,9 +17,7 @@ function Dashboard() {
         <>
             <HeaderS title={"Dashboard"}/>
             <Div>
-                <div className='from'>
-                    <FormProducto/>
-                </div>
+                <FormProducto/>
                 <ContentDash/>
             </Div>
             <Footer/>
