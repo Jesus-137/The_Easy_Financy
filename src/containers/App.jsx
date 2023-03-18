@@ -9,10 +9,11 @@ import RecuperarCuenta from "../pages/RecuperarCuenta";
 import CorreoMandado from "../pages/CoreoMandado";
 import Dashboard from "../pages/Dashboard";
 import Ventas from "../pages/Ventas";
+import Almacen from "../pages/Almacen";
 import Metas from "../pages/Metas";
 import Pagos from "../pages/Pagos";
 import NotFound from "../pages/NotFound";
-import PageUseless from "../pages/PageUseless";
+import PageUseless from "../pages/PageUseless";//mailbox.js.org
 
 function App() {
     const [isLoged, setIsLoged] = useState(false)
@@ -32,6 +33,7 @@ function App() {
                         <Route path="/pagos" element={<Pagos/>}/>
                     </Route>
                     <Route path="/construccion" element={<PageUseless/>}/>
+                    <Route path="/almacen" element={<Almacen/>}/>
                     <Route path="/*" element={<NotFound/>}/>
                 </Routes>
             </UserContext.Provider>
