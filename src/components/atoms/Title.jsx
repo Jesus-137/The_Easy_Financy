@@ -3,9 +3,21 @@ import styled from 'styled-components';
 const StyledH1 = styled.h1`
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
     font-style: medium;
-    font-size: 1.8rem;
     font-variant: small-caps;
     text-align: center;
+    font-size: 62.5%;
+    @media screen and (min-width: 320px) and (max-width: 400px) {
+        font-size: 0.65rem;
+    }
+    @media screen and (min-width: 400px) and (max-width: 600px){
+        font-size: 0.9rem;
+    }
+    @media screen and (min-width: 600px) and (max-width: 700px){
+        font-size: 1rem;
+    }
+    @media screen and (min-width: 700px) and (max-width: 1500px){
+        font-size: 1.8rem;
+    }
 `;
 
 function Title({title}) {
