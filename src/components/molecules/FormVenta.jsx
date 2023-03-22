@@ -11,7 +11,13 @@ const StyledForm = styled.form`
     justify-content: space-between;
     width: 50%;
     height: 380px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    @media screen and (max-width: 700px) {
+        width: 96%;
+    }
+    @media screen and (min-width: 1300px) and (max-width: 1500px){
+        width: 100%;
+    }
 `;
 
 function FormVenta() {
@@ -32,16 +38,18 @@ function FormVenta() {
     }
 
     return (
-        <StyledForm ref={form}>
-            <Input data={"Folio del producto"} type={"number"} name={"folio"}/>
-            <Input data={"Ventas por mes"} type={"number"} name={"ventas"}/>
-            <Input data={"Mes"} type={"number"} name={"mes"}/>
-            <Boton type={"button"} onClick={handlerClick} data={"Registrar"}/>
-            <StyledLink to={"/grafica"}>
-                <Boton data={"Dasboard"}/>
-            </StyledLink>
-            <Parrafo msn={state}/>
-        </StyledForm>
+        <>
+            <StyledForm ref={form}>
+                <Input data={"Folio del producto"} type={"number"} name={"folio"}/>
+                <Input data={"Ventas por mes"} type={"number"} name={"ventas"}/>
+                <Input data={"Mes"} type={"number"} name={"mes"}/>
+                <Boton type={"button"} onClick={handlerClick} data={"Registrar"}/>
+                <StyledLink to={"/grafica"}>
+                    <Boton data={"Dasboard"}/>
+                </StyledLink>
+                <Parrafo msn={state}/>
+            </StyledForm>
+        </>
     );
 }
 

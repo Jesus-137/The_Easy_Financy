@@ -1,20 +1,18 @@
-import styled from 'styled-components';
 import SubTitle from '../atoms/Subtitle';
 import InformacionPagoO from '../molecules/InformacionPagoO';
 import InformacionPagoC from '../molecules/InformacionPagoC';
-
-const Div = styled.div`
-  /* ... */
-`;
+import StyledLink from '../atoms/Link';
+import Boton from '../atoms/Boton';
 
 function ContentPago() {
     return (
-        <Div>
+        <div>
             <SubTitle subTitle={"Pago internet"}/>
             <InformacionPagoO cantidad={"Cantidad: $759.99"} fecha={"Fecha por pagar: 11/09/2022"}/>
             <SubTitle subTitle={"Pago de los empleados"}/>
             <InformacionPagoC cantidad={"Cantidad: $759.99"} fecha={"Fecha por pagar: 11/10/2022"}/>
-        </Div>
+            <StyledLink to="/metas"><Boton data={"Metas"}/></StyledLink>
+        </div>
     );
 }
 

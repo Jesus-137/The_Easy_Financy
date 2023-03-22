@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 import HeaderForm from '../molecules/HeaderForm';
 import Input from '../atoms/Input';
 import SubTitle from '../atoms/Subtitle';
@@ -18,13 +19,18 @@ const Div = styled.div`
 `;
 
 function FormRecuperar() {
+  const navigate = useNavigate();
+  const Correo=(e)=>{
+    e.preventDefault();
+    navigate("/correo")
+  }
   return (
     <Div>
       <HeaderForm name={"Recuperar contraseña"}/>
       <form>
         <SubTitle subTitle={"Nececitamos comprobar tu identidad"}/>
         <Input data={"Correo electronico"} type={'email'} name={"correo"}/>
-        <StyledLink to={"/correo"}><Boton data={"Mandar correo electrónico"} type={'button'}/></StyledLink>
+        <Boton data={"Mandar correo"} type={'button'} onClick={Correo}/>
         <StyledLink to={"/"}>Cancelar</StyledLink>
       </form>
     </Div>

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import HeaderS from "../components/molecules/HeaderStatic";
 import ContentVenta from "../components/organims/ContentVenta";
 import StyledLinkW from "../components/atoms/LinkWhite";
+import Footer from "../components/molecules/Footer";
 
 const Div = styled.div`
     display: flex;
@@ -16,6 +17,7 @@ function Ventas() {
                 <StyledLinkW to={'/meta'}>Metas</StyledLinkW>
             }/>
             <ContentVenta/>
+            <Footer/>
         </Div>
     );
 }

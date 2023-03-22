@@ -2,7 +2,7 @@ import { PieChart, ResponsiveContainer, Pie, Tooltip, Cell } from 'recharts'
 import styled from 'styled-components';
 
 const Div = styled.div`
-  padding: 2%;
+  /* padding: 1%; */
 `;
 
 const Grahp = ({data, COLORS}) => {

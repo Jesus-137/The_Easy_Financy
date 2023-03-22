@@ -7,6 +7,7 @@ const Div = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 50%;
     .link{
         background-color: #9595d7;
         display: flex;
@@ -15,8 +16,9 @@ const Div = styled.div`
         text-align: center;
         width: 100%;
     }
-    @media screen and (min-width: 320px) {
-        width: 100%;
+    @media screen and (min-width: 320px) and (max-width: 700px){
+        width: 98%;
+        margin: 1%;
     }
 `;
 
@@ -33,7 +35,7 @@ const COLORS = ['#00FFB2', '#F54B4B', '#010846', '#FBA600', '#E56E00', '#4C0297'
 
 function ContentDash() {
     return (
-        <Div style={{width: "50%", height: 565}}>
+        <Div>
             <div className='link'>
                 <StyledLinkW to={"/grafica"}>por dia</StyledLinkW>
                 <StyledLinkW to={"/grafica"}>por mes</StyledLinkW>

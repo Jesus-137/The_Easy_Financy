@@ -26,9 +26,6 @@ const StyledFooter = styled.footer`
         justify-content: center;
         width: 20%;
     }
-    @media screen and (min-width: 320px) {
-        
-    }
 `;
 
 

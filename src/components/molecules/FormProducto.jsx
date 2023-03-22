@@ -8,6 +8,11 @@ const StyledForm = styled.form`
     flex-direction: column;
     flex-wrap: wrap;
     width: 45%;
+    margin-bottom: 2%;
+    @media screen and (min-width: 320px) and (max-width: 700px){
+        width: 98%;
+        margin: 1%;
+    }
 `;
 
 

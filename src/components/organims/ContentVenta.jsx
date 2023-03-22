@@ -7,9 +7,10 @@ const Div = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 3%;
-    @media screen and (min-width: 320px) {
-        width: 100%;
+    margin: 0 1%;
+    @media screen and (min-width: 320px) and (max-width: 700px){
+        width: 90%;
+        flex-direction: column;
     }
 `;
 
