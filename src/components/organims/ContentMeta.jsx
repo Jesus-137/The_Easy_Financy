@@ -8,6 +8,10 @@ const Div = styled.div`
     align-items: center;
     text-align: start;
     width: 45%;
+    @media screen and (min-width: 320px) and (max-width: 600px){
+        width: 96%;
+        padding: 0 2%;
+    }
 `;
 
 

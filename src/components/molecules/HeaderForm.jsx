@@ -1,24 +1,21 @@
 import styled from "styled-components";
-import Logo from "../atoms/Logo";
+import StyledIMG from "../atoms/LogoFrom";
 import Title from "../atoms/Title";
 import logo from "../../assets/img/TEF.png";
 
 const Div = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    justify-items: center;
-    text-align: center;
     margin-bottom: 7%;
-    padding-right: 30%;
-    width: 69.9%;
+    width: 100%;
     border-bottom: 5px dashed;
+    align-items: center;
 `;
 
 function HeaderForm({name}) {
     return (
         <Div>
-            <Logo img={logo}/>
+            <StyledIMG src={logo}/>
             <Title title={name}/>
         </Div>
     );

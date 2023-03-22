@@ -7,7 +7,7 @@ const Div = styled.div`
 
 const Grahp = ({data, COLORS}) => {
   return (
-    <Div style={{ width: '50%', height: 200,}}>
+    <Div style={{ width: '100%', height: 200,}}>
       <ResponsiveContainer>
         <PieChart>
             <Pie

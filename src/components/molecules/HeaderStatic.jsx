@@ -18,12 +18,34 @@ const StyledHeader = styled.header`
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
+        @media screen and (max-width: 700px) {
+            width: 30%;
+        }
     }
     .link{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         width: 23%;
+        @media screen and (max-width: 400px) {
+            width: 30%;
+        }
+        @media screen and (min-width: 400px) and (max-width: 470px){
+            width: 35%;
+        }
+        @media screen and (min-width: 470px) and (max-width: 500px){
+            width: 40%;
+        }
+        @media screen and (min-width: 500px) and (max-width: 570px){
+            width: 36%;
+        }
+        @media screen and (min-width: 570px) and (max-width: 640px){
+            width: 33%;
+        }
+        @media screen and (min-width: 640px) and (max-width: 700px){
+            width: 30%;
+        }
     }
 `;
 

@@ -1,12 +1,10 @@
-import { useRef, useState, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-import UserContext from '../../context/UserContext';
-import StyledLink from '../atoms/Link';
+import { useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Input from '../atoms/Input';
-import Boton from '../atoms/Boton';
-import Parrafo from '../atoms/Parrafo';
 import HeaderForm from '../molecules/HeaderForm';
+import Boton from '../atoms/Boton';
+import StyledLink from '../atoms/Link';
 
 const Div = styled.div`
     display: flex;
@@ -14,14 +12,13 @@ const Div = styled.div`
     flex-direction: column;
     width: 45%;
     border: 3px dashed #595F81;
-    margin-top: 1%;
+    margin-top: 5%;
     text-align: center;
     font-size: 1.5rem;
     padding-bottom: 1%;
 `;
 
-function FromRegister() {
-    const {isLoged, setIsLoged} = useContext(UserContext);
+function FormRegistrarPago() {
     const form= useRef();
     const navigate=useNavigate();
     const [state, setState]=useState([]);
@@ -67,21 +64,19 @@ function FromRegister() {
         }
     }
     return (
-        <>
-            <Div>
-                <HeaderForm name={"Crear cuenta"}/>
-                <form ref={form}>
-                    <Input type={"text"} name={"nombre"} data={"Primer nombre"}/>
-                    <Input type={"email"} name={"email"} data={"Correo electronico"}/>
-                    <Input type={"text"} name={"usuario"} data={"Nombre de usuario"}/>
-                    <Input type={"password"} name={"contrasenia"} data={"Contraseña"}/>
-                    <Boton onClick={chandlerClick} data={"Aceptar"}/>
-                    <StyledLink to={"/"}>Cancelar</StyledLink>
-                </form>
-            </Div>
-            <Parrafo msn={state}/>
-        </>
+        <Div>
+            <HeaderForm name={"Registrar pagos"}/>
+            <form ref={form}>
+                <Input type={"text"} data={"Nombre del pago"} name={"pago"}/>
+                <Input type={"number"} data={"Cantidad del pago"} name={"cantidad"}/>
+                <Input type={"date"} data={"Periodo de pagos"} name={"periodo"}/>
+                <Boton data={"Registrar pago"} onClick={chandlerClick}/>
+                <StyledLink to={"/pagos"}>
+                    <Boton data={"Cancelar"}/>
+                </StyledLink>
+            </form>
+        </Div>
     );
 }
 
-export default FromRegister;
+export default FormRegistrarPago;

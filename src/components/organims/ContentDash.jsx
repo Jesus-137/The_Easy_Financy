@@ -15,6 +15,9 @@ const Div = styled.div`
         text-align: center;
         width: 100%;
     }
+    @media screen and (min-width: 320px) {
+        width: 100%;
+    }
 `;
 
 const data = [

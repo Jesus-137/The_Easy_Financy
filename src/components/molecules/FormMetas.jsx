@@ -10,6 +10,9 @@ const Div = styled.div`
     justify-content: center;
     align-items: center;
     width: 50%;
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+        width: 96%;
+    }
 `;
 
 function FormMeta() {

@@ -5,6 +5,7 @@ import UserContext from "../context/UserContext";
 import HomeView from "../pages/HomeView";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import RealizarPago from "../pages/RealizarPago";
 import RecuperarCuenta from "../pages/RecuperarCuenta";
 import CorreoMandado from "../pages/CoreoMandado";
 import Dashboard from "../pages/Dashboard";
@@ -12,6 +13,8 @@ import Ventas from "../pages/Ventas";
 import Almacen from "../pages/Almacen";
 import Metas from "../pages/Metas";
 import Pagos from "../pages/Pagos";
+import RegistrarPago from "../pages/RegistrarPagos";
+import Produccion from "../pages/Produccion";
 import NotFound from "../pages/NotFound";
 import PageUseless from "../pages/PageUseless";//mailbox.js.org
 
@@ -26,11 +29,14 @@ function App() {
                     <Route path="/crear" element={<Register/>}/>
                     <Route path="/recuperar" element={<RecuperarCuenta/>}/>
                     <Route path="/correo" element={<CorreoMandado/>}/>
-                    <Route element={<RouteProtected session={isLoged}/>}>
+                    <Route path="/pagar" element={<RealizarPago/>}/>
                         <Route path="/grafica" element={<Dashboard/>}/>
                         <Route path="/venta" element={<Ventas/>}/>
                         <Route path="/meta" element={<Metas/>}/>
                         <Route path="/pagos" element={<Pagos/>}/>
+                        <Route path="/registrarpago" element={<RegistrarPago/>}/>
+                        <Route path="/produccion" element={<Produccion/>}/>
+                    <Route element={<RouteProtected session={isLoged}/>}>
                     </Route>
                     <Route path="/construccion" element={<PageUseless/>}/>
                     <Route path="/almacen" element={<Almacen/>}/>

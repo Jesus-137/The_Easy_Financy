@@ -8,7 +8,11 @@ import Footer from '../components/molecules/Footer';
 const Div = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 2%;
+    @media screen and (min-width: 320px) and (max-width: 600px) {
+        flex-direction: column;
+    }
 `;
 
 function Metas() {

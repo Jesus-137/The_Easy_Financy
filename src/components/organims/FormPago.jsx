@@ -22,7 +22,7 @@ const Div = styled.div`
 `;
 
 
-function FromLogin() {
+function FormPago() {
     const {isLoged, setIsLoged} = useContext(UserContext);
     const form= useRef();
     const navigate=useNavigate();
@@ -64,13 +64,11 @@ function FromLogin() {
     return (
         <>
             <Div>
-                <HeaderForm name={"Iniciar secion"}/>
+                <HeaderForm name={"Pagar"}/>
                 <form ref={form}>
-                    <Input type={"text"} name={"usuario"} data={"Nombre de usuario"}/>
+                    <Input type={"text"} name={"usuario"} data={"Correo de paypall"}/>
                     <Input type={"password"} name={"contrasenia"} data={"Contraseña"}/>
-                    <StyledLink to={"/crear"}><Boton data={"¿No tienes cuenta? cree una cuenta"}/></StyledLink>
-                    <Boton onClick={chandlerClick} data={"Aceptar"}/>
-                    <StyledLink to={"/recuperar"}><Boton data={"RecuperarCuenta"}/></StyledLink>
+                    <Boton onClick={chandlerClick} data={"Realizar pago"}/>
                     <StyledLink to={"/"}>Cancelar</StyledLink>
                 </form>
             </Div>
@@ -79,4 +77,4 @@ function FromLogin() {
     );
 }
 
-export default FromLogin;
+export default FormPago;

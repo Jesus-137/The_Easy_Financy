@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import FormVenta from "../molecules/FormVenta";
-import Grahp from "../atoms/Grahp";
+import styled from 'styled-components';
+import FormProduccion from '../molecules/FormProduccion';
+import Grahp from '../atoms/Grahp';
 
 const Div = styled.div`
     display: flex;
@@ -8,9 +8,6 @@ const Div = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 3%;
-    @media screen and (min-width: 320px) {
-        width: 100%;
-    }
 `;
 
 const data = [
@@ -24,13 +21,13 @@ const data = [
 
 const COLORS = ['#00FFB2', '#F54B4B', '#010846', '#FBA600', '#E56E00', '#4C0297']
 
-function ContentVenta() {
+function ContentProduccion() {
     return (
         <Div>
-            <FormVenta/>
+            <FormProduccion/>
             <Grahp data={data} COLORS={COLORS}/>
         </Div>
     );
 }
 
-export default ContentVenta;
+export default ContentProduccion;
