@@ -11,7 +11,6 @@ const StyledForm = styled.form`
     justify-content: space-between;
     width: 50%;
     height: 380px;
-    flex-wrap: nowrap;
     @media screen and (max-width: 700px) {
         width: 96%;
     }
@@ -41,12 +40,10 @@ function FormVenta() {
         <>
             <StyledForm ref={form}>
                 <Input data={"Folio del producto"} type={"number"} name={"folio"}/>
-                <Input data={"Ventas por mes"} type={"number"} name={"ventas"}/>
+                <Input data={"Ventas de un mes"} type={"number"} name={"ventas"}/>
                 <Input data={"Mes"} type={"number"} name={"mes"}/>
                 <Boton type={"button"} onClick={handlerClick} data={"Registrar"}/>
-                <StyledLink to={"/grafica"}>
-                    <Boton data={"Dasboard"}/>
-                </StyledLink>
+                <StyledLink to={"/grafica"}><Boton data={"Dashboard"}/></StyledLink>
                 <Parrafo msn={state}/>
             </StyledForm>
         </>

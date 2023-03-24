@@ -20,7 +20,7 @@ function Metas() {
         <>
             <HeaderS title={"Metas"} links={(
                 <>
-                    <StyledLinkW to={"/construccion"}>Riesgo</StyledLinkW>
+                    <StyledLinkW to={"/riesgo"}>Riesgo</StyledLinkW>
                     <StyledLinkW to={"/pagos"}>pagos</StyledLinkW>
                     <StyledLinkW to={"/modelo"}>Negocios</StyledLinkW>
                 </>

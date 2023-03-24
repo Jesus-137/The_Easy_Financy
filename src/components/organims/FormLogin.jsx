@@ -64,13 +64,13 @@ function FromLogin() {
     return (
         <>
             <Div>
-                <HeaderForm name={"Iniciar secion"}/>
+                <HeaderForm name={"Iniciar sesión"}/>
                 <form ref={form}>
-                    <Input type={"text"} name={"usuario"} data={"Nombre de usuario"}/>
+                    <Input type={"text"} name={"usuario"} data={"Nombre de Usuario"}/>
                     <Input type={"password"} name={"contrasenia"} data={"Contraseña"}/>
-                    <StyledLink to={"/crear"}><Boton data={"¿No tienes cuenta? cree una cuenta"}/></StyledLink>
+                    <StyledLink to={"/crear"}><Boton data={"¿No tienes cuenta? Crea una aquí"}/></StyledLink>
+                    <StyledLink to={"/recuperar"}><Boton data={"Recuperar Contraseña"}/></StyledLink>
                     <Boton onClick={chandlerClick} data={"Aceptar"}/>
-                    <StyledLink to={"/recuperar"}><Boton data={"RecuperarCuenta"}/></StyledLink>
                     <StyledLink to={"/"}>Cancelar</StyledLink>
                 </form>
             </Div>

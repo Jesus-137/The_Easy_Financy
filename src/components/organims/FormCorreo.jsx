@@ -21,8 +21,8 @@ function FormCorreo() {
     <Div>
       <HeaderForm name={'Cambiar contraseña'}/>
       <form>
-        <Input data={"Nueva contraceña"} type={"password"}/>
-        <Input data={"Repetir contraceña"} type={"password"}/>
+        <Input data={"Nueva contraseña"} type={"password"}/>
+        <Input data={"Repetir contraseña"} type={"password"}/>
         <Boton data={"Aceptar"} type={"button"}/>
         <StyledLink to={"/iniciar"}>Cancelar</StyledLink>
       </form>

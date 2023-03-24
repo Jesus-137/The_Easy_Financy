@@ -5,7 +5,7 @@ import Footer from '../components/molecules/Footer';
 function Pagos() {
     return (
         <div>
-            <HeaderS title={"Pagos"}/>
+            <HeaderS title={"Pagos realizados"}/>
             <ContentPago/>
             <Footer/>
         </div>

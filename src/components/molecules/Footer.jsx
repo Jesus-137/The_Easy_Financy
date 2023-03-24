@@ -41,7 +41,7 @@ function Footer() {
             </div>
             <div className="Nosotros">
                 <SubTitle subTitle={"Sobre nosotros"}/>
-                <Parrafo msn={"Somo una empresa dedicada a ayudar a las micro empresas Mexicanas con su crecimiento y su progreso, para que no sean como la mayoría de las empresas, de esta forma ayudamos a que Mexico crezca gracias a las diversas nuevas empresas que podrán crecer con nuestra ayuda."}/>
+                <Parrafo msn={"Somos una empresa dedicada ayudar a las microempresas Mexicanas con su crecimiento y su progreso para que no sean como la mayoría de las empresas, de esta forma ayudar a que México crecer gracias a las diversas nuevas empresas que podrán crecer con nuestra ayuda."}/>
             </div>
         </StyledFooter>
     );

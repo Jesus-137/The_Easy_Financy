@@ -14,6 +14,8 @@ import Almacen from "../pages/Almacen";
 import Metas from "../pages/Metas";
 import Pagos from "../pages/Pagos";
 import ModeloNegocio from "../pages/ModeloNegocio";
+import Riesgo from "../pages/Riesgo";
+import Maquina from "../pages/Maquina";
 import RegistrarPago from "../pages/RegistrarPagos";
 import Produccion from "../pages/Produccion";
 import NotFound from "../pages/NotFound";
@@ -38,10 +40,12 @@ function App() {
                         <Route path="/registrarpago" element={<RegistrarPago/>}/>
                         <Route path="/produccion" element={<Produccion/>}/>
                         <Route path="/modelo" element={<ModeloNegocio/>}/>
+                        <Route path="/riesgo" element={<Riesgo/>}/>
+                        <Route path="/maquina" element={<Maquina/>}/>
+                        <Route path="/almacen" element={<Almacen/>}/>
                     <Route element={<RouteProtected session={isLoged}/>}>
                     </Route>
                     <Route path="/construccion" element={<PageUseless/>}/>
-                    <Route path="/almacen" element={<Almacen/>}/>
                     <Route path="/*" element={<NotFound/>}/>
                 </Routes>
             </UserContext.Provider>

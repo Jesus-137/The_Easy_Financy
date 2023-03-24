@@ -14,12 +14,10 @@ function FormProduccion() {
     return (
         <Div>
             <form>
-                <Input type={"number"} data={"Costo por dia"} name={"costo"}/>
+                <Input type={"number"} data={"Costo por día"} name={"costo"}/>
                 <Input type={"number"} data={"Cantidad"} name={"cantidad"}/>
                 <Boton data={"Registrar"}/>
-                <StyledLink to={"/venta"}>
-                    <Boton data={"Ventas"}/>
-                </StyledLink>
+                <StyledLink to={"/venta"}><Boton data={"Ventas"}/></StyledLink>
             </form>
         </Div>
     );

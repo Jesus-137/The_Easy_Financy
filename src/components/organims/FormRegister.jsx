@@ -72,8 +72,8 @@ function FromRegister() {
                 <HeaderForm name={"Crear cuenta"}/>
                 <form ref={form}>
                     <Input type={"text"} name={"nombre"} data={"Primer nombre"}/>
-                    <Input type={"email"} name={"email"} data={"Correo electronico"}/>
-                    <Input type={"text"} name={"usuario"} data={"Nombre de usuario"}/>
+                    <Input type={"email"} name={"email"} data={"Correo Electrónico"}/>
+                    <Input type={"text"} name={"usuario"} data={"Nombre de Usuario"}/>
                     <Input type={"password"} name={"contrasenia"} data={"Contraseña"}/>
                     <Boton onClick={chandlerClick} data={"Aceptar"}/>
                     <StyledLink to={"/"}>Cancelar</StyledLink>

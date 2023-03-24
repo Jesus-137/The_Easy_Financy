@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 import SubTitle from '../atoms/Subtitle';
-import StyledLink from '../atoms/Link';
-import Boton from '../atoms/Boton';
+import Input from '../atoms/Input';
 
 const StiledTabla = styled.table`
-    width: 98%;
-    margin: 1%;
+    width: 45%;
+    padding: 1%;
     td{
         width: 100%;
         display: flex;
@@ -29,7 +28,7 @@ const StiledTabla = styled.table`
         width: 70%;
         padding: 1%;
         border: 5px solid #000;
-        background-color: rgba(217, 217, 217, 1);
+        background-color: #E4E7FC;
         text-align: center;
         font-family: 'Raleway', Arial, Helvetica, sans-serif;
         font-weight: lighter;
@@ -38,21 +37,21 @@ const StiledTabla = styled.table`
     }
 `;
 
-function TablaAlmacen({columna}) {
+function TablaMaquina({columna}) {
     return (
         <StiledTabla>
+            <Input type={"text"} data={"Buscar maquina"} name={"buscar"}/>
             <td>
                 <th className='th1'>
-                    <SubTitle subTitle={"Nombre del producto"}/>
+                    <SubTitle subTitle={"Nombre de la maquina"}/>
                 </th>
                 <th className='th2'>
-                    <SubTitle subTitle={"Cantidad por mes"}/>
+                    <SubTitle subTitle={"Fecha de mantenimiento"}/>
                 </th>
             </td>
             {columna}
-            <StyledLink to={"/venta"}><Boton data={'Ventas'}/></StyledLink>
         </StiledTabla>
     );
 }
 
-export default TablaAlmacen;
+export default TablaMaquina;

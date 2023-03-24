@@ -28,9 +28,9 @@ function FormRecuperar() {
     <Div>
       <HeaderForm name={"Recuperar contraseña"}/>
       <form>
-        <SubTitle subTitle={"Nececitamos comprobar tu identidad"}/>
-        <Input data={"Correo electronico"} type={'email'} name={"correo"}/>
-        <Boton data={"Mandar correo"} type={'button'} onClick={Correo}/>
+        <SubTitle subTitle={"Necesitamos comprobar tu identidad"}/>
+        <Input data={"Correo Electrónico"} type={'email'} name={"correo"}/>
+        <Boton data={"Mandar correo electrónico"} type={'button'} onClick={Correo}/>
         <StyledLink to={"/"}>Cancelar</StyledLink>
       </form>
     </Div>

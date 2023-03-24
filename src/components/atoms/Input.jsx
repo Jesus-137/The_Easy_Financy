@@ -14,6 +14,7 @@ const Div = styled.div`
     font-size: 62.5%;
     padding: 2% 0%;
     .inpunt{
+        width: 100%;
         height: 20px;
         border-radius: 10px;
         @media screen and (min-width: 320px) and (max-width: 400px) {

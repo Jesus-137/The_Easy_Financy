@@ -4,7 +4,6 @@ import Parrafo from "../atoms/Parrafo";
 import Image from "../atoms/Image";
 
 const Div = styled.div`
-    margin-top: 16%;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -12,10 +11,10 @@ const Div = styled.div`
     flex-wrap: wrap;
     .information{
         width: 48%;
-        padding: 1%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        text-align: center;
         @media screen and (min-width: 320px) and (max-width: 520px){
             width: 97%;
         }

@@ -14,7 +14,13 @@ function Ventas() {
     return (
         <Div>
             <HeaderS title={"Ventas"} links={
-                <StyledLinkW to={'/meta'}>Metas</StyledLinkW>
+                <>
+                    <StyledLinkW to={'/meta'}>Metas</StyledLinkW>
+                    <StyledLinkW to={'/maquina'}>Maquinas</StyledLinkW>
+                    <StyledLinkW to={'/riesgo'}>Riesgo</StyledLinkW>
+                    <StyledLinkW to={'/almacen'}>Almacen</StyledLinkW>
+                    <StyledLinkW to={'/produccion'}>Producción</StyledLinkW>
+                </>
             }/>
             <ContentVenta/>
             <Footer/>

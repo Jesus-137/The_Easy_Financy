@@ -68,12 +68,10 @@ function FormRegistrarPago() {
             <HeaderForm name={"Registrar pagos"}/>
             <form ref={form}>
                 <Input type={"text"} data={"Nombre del pago"} name={"pago"}/>
-                <Input type={"number"} data={"Cantidad del pago"} name={"cantidad"}/>
-                <Input type={"date"} data={"Periodo de pagos"} name={"periodo"}/>
+                <Input type={"number"} data={"Cantidad de pago"} name={"cantidad"}/>
+                <Input type={"number"} data={"Periodo de pagos"} name={"periodo"}/>
                 <Boton data={"Registrar pago"} onClick={chandlerClick}/>
-                <StyledLink to={"/pagos"}>
-                    <Boton data={"Cancelar"}/>
-                </StyledLink>
+                <StyledLink to={"/pagos"}>Cancelar</StyledLink>
             </form>
         </Div>
     );

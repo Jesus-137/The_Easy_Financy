@@ -66,8 +66,8 @@ function FormPago() {
             <Div>
                 <HeaderForm name={"Pagar"}/>
                 <form ref={form}>
-                    <Input type={"text"} name={"usuario"} data={"Correo de paypall"}/>
-                    <Input type={"password"} name={"contrasenia"} data={"Contraseña"}/>
+                    <Input type={"text"} name={"paypall"} data={"Correo de paypall"}/>
+                    <Input type={"password"} name={"password"} data={"Contraseña"}/>
                     <Boton onClick={chandlerClick} data={"Realizar pago"}/>
                     <StyledLink to={"/"}>Cancelar</StyledLink>
                 </form>
