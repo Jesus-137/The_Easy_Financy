@@ -16,7 +16,7 @@ const StyledH3 = styled.h3`
         font-size: 1rem;
     }
     @media screen and (min-width: 700px) and (max-width: 1500px){
-        font-size: 1.2rem;
+        font-size: 1.5  rem;
     }
 `;
 

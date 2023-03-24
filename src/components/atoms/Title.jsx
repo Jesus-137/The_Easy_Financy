@@ -4,7 +4,6 @@ const StyledH1 = styled.h1`
     font-family: 'Raleway', Arial, Helvetica, sans-serif;
     font-style: medium;
     font-variant: small-caps;
-    text-align: center;
     font-size: 62.5%;
     @media screen and (min-width: 320px) and (max-width: 400px) {
         font-size: 0.65rem;
@@ -16,7 +15,7 @@ const StyledH1 = styled.h1`
         font-size: 1rem;
     }
     @media screen and (min-width: 700px) and (max-width: 1500px){
-        font-size: 1.8rem;
+        font-size: 2.5rem;
     }
 `;
 

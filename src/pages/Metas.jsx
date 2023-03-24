@@ -22,7 +22,7 @@ function Metas() {
                 <>
                     <StyledLinkW to={"/construccion"}>Riesgo</StyledLinkW>
                     <StyledLinkW to={"/pagos"}>pagos</StyledLinkW>
-                    <StyledLinkW to={"/construccion"}>Negocios</StyledLinkW>
+                    <StyledLinkW to={"/modelo"}>Negocios</StyledLinkW>
                 </>
             )}/>
             <Div>

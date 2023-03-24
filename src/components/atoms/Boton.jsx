@@ -24,6 +24,7 @@ const Button = styled.button`
         height: 40px;
     }@media screen and (min-width: 700px) and (max-width: 1500px){
         font-size: 1.8rem;
+        height: 40px;
     }
 `;
 

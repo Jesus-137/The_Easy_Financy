@@ -5,7 +5,7 @@ import Imagen from '../../assets/img/TEF.png';
 
 const StyledHeader = styled.header`
     position: static;
-    width: 95%;
+    width: 100%;
     padding: 1% 4% 2% 1%;
     background-color: rgba(93, 106, 191, 0.87);
     display: flex;

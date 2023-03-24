@@ -13,6 +13,7 @@ import Ventas from "../pages/Ventas";
 import Almacen from "../pages/Almacen";
 import Metas from "../pages/Metas";
 import Pagos from "../pages/Pagos";
+import ModeloNegocio from "../pages/ModeloNegocio";
 import RegistrarPago from "../pages/RegistrarPagos";
 import Produccion from "../pages/Produccion";
 import NotFound from "../pages/NotFound";
@@ -36,6 +37,7 @@ function App() {
                         <Route path="/pagos" element={<Pagos/>}/>
                         <Route path="/registrarpago" element={<RegistrarPago/>}/>
                         <Route path="/produccion" element={<Produccion/>}/>
+                        <Route path="/modelo" element={<ModeloNegocio/>}/>
                     <Route element={<RouteProtected session={isLoged}/>}>
                     </Route>
                     <Route path="/construccion" element={<PageUseless/>}/>

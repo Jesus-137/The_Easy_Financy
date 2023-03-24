@@ -16,7 +16,7 @@ const StyledH2 = styled.h2`
         font-size: 1rem;
     }
     @media screen and (min-width: 700px) and (max-width: 1500px){
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 `;
 

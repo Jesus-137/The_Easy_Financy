@@ -7,7 +7,7 @@ function HomeView() {
     return (
         <>
             <Header links={
-            <>
+                <>
                 <StyledLinkW to="/iniciar">Iniciar sesión</StyledLinkW>
                 <StyledLinkW to="/crear">Registrarte</StyledLinkW>
             </>
