@@ -1,19 +1,27 @@
+import { Bar } from "recharts";
 import styled from "styled-components";
 import Grahp from "../atoms/Grahp";
+import SimpleBarCharts from "../atoms/GrahpBara";
 import StyledLinkW from "../atoms/LinkWhite";
-import SubTitle from "../atoms/Subtitle";
 
 const Div = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
+    width: 100%;
+    height: auto;
     .link{
         background-color: #9595d7;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         text-align: center;
+        width: 100%;
+    }
+    .gastos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
         width: 100%;
     }
     @media screen and (min-width: 320px) and (max-width: 700px){
@@ -25,26 +33,37 @@ const Div = styled.div`
 const data = [
     { name: "Group A", value: 300 },
     { name: 'Group B', value: 4567 },
-    { name: 'Group C', value: 1398 },
-    { name: 'Group D', value: 9800 },
-    { name: 'Group E', value: 3908 },
-    { name: 'Group F', value: 4800 },
 ]
-
-const COLORS = ['#00FFB2', '#F54B4B', '#010846', '#FBA600', '#E56E00', '#4C0297']
 
 function ContentDash() {
     return (
         <Div>
             <div className='link'>
-                <StyledLinkW to={"/grafica"}>por dia</StyledLinkW>
-                <StyledLinkW to={"/grafica"}>por mes</StyledLinkW>
-                <StyledLinkW to={"/grafica"}>por año</StyledLinkW>
+                <StyledLinkW>por dia</StyledLinkW>
+                <StyledLinkW>por mes</StyledLinkW>
+                <StyledLinkW>por año</StyledLinkW>
             </div>
-            <SubTitle subTitle={"Gastos"}/>
-            <Grahp data={data} COLORS={COLORS}/>
-            <SubTitle subTitle={"Ganancias"}/>
-            <Grahp data={data} COLORS={COLORS}/>
+            <div className="gastos">
+                <Grahp data={data} title={"Gastos"}/>
+                <Grahp data={data} title={"Gastos"}/>
+                <Grahp data={data} title={"Gastos"}/>
+            </div>
+            <div className="gastos">
+                <SimpleBarCharts bar={
+                    <Bar dataKey="weight" fill='#00D4FF'/>
+                }/>
+                <SimpleBarCharts bar={
+                    <Bar dataKey="weight" fill='#00D4FF'/>
+                }/>
+                <SimpleBarCharts bar={
+                    <Bar dataKey="weight" fill='#00D4FF'/>
+                }/>
+            </div>
+            <div className="gastos">
+                <Grahp data={data} title={"Gastos"}/>
+                <Grahp data={data} title={"Gastos"}/>
+                <Grahp data={data} title={"Gastos"}/>
+            </div>
         </Div>
     );
 }

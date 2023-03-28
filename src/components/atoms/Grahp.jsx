@@ -1,25 +1,34 @@
+import styled from 'styled-components';
 import { PieChart, ResponsiveContainer, Pie, Tooltip, Cell } from 'recharts'
+import SubTitle from './Subtitle';
 
-const Grahp = ({data, COLORS}) => {
+const Div = styled.div`
+  width: 33%;
+`;
+
+const COLORS = ['#E0E0EA','#FBC235']
+
+const Grahp = ({data, title}) => {
   return (
-    <div style={{ width: '100%', height: 200,}}>
-      <ResponsiveContainer>
-        <PieChart>
-            <Pie
-                dataKey="value" 
-                data={data}
-                innerRadius={60}
-                outerRadius={85}
-                fill="#82ca9d"
-            >
-                {data.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                ))}     
-            </Pie>
-            <Tooltip/>
-        </PieChart>
-      </ResponsiveContainer>
-    </div>
+    <Div>
+      <SubTitle subTitle={title}/>
+      <div style={{ width: '100%', height: 200,}}>
+        <ResponsiveContainer>
+          <PieChart>
+              <Pie
+                  dataKey="value" 
+                  data={data}
+                  innerRadius={60}
+                  outerRadius={85}
+                  fill="#E0E0EA"
+              >
+                <Cell key={`cell-${2}`} fill={COLORS[1 % COLORS.length]} />
+              </Pie>
+              <Tooltip/>
+          </PieChart>
+        </ResponsiveContainer>
+      </div>
+    </Div>
   )
 }
 

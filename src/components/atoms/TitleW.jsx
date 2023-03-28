@@ -7,6 +7,8 @@ const StyledH1 = styled.h1`
     line-height: 46px;
     font-variant: small;
     font-size: 62.5%;
+    text-align: center;
+    color: white;
     @media screen and (min-width: 320px) and (max-width: 400px) {
         font-size: 0.65rem;
     }
@@ -21,10 +23,10 @@ const StyledH1 = styled.h1`
     }
 `;
 
-function Title({title}) {
+function TitleW({title}) {
     return (
         <StyledH1>{title}</StyledH1>
     );
 }
 
-export default Title;
+export default TitleW;

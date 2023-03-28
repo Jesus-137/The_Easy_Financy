@@ -1,10 +1,13 @@
 import styled from 'styled-components';
 
 const StyledH3 = styled.h3`
-    font-family: 'Raleway', Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-    font-variant: small-caps;
-    text-align: justify;
+    font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 33px;
+    font-variant: small;
+    color: #000;
+    text-align: center;
     font-size: 62.5%;
     @media screen and (min-width: 320px) and (max-width: 400px){
         font-size: 0.65rem;
@@ -16,7 +19,7 @@ const StyledH3 = styled.h3`
         font-size: 1rem;
     }
     @media screen and (min-width: 700px) and (max-width: 1500px){
-        font-size: 1.5  rem;
+        font-size: 1.5rem;
     }
 `;
 

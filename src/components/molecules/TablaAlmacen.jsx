@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import SubTitle from '../atoms/Subtitle';
 import StyledLink from '../atoms/Link';
-import Boton from '../atoms/Boton';
+import Boton from '../atoms/BotonF';
 
 const StiledTabla = styled.table`
     width: 98%;

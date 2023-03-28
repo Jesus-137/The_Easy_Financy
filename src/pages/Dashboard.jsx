@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import HeaderS from '../components/molecules/HeaderStatic';
-import FormProducto from "../components/molecules/FormProducto";
 import ContentDash from '../components/organims/ContentDash';
 import Footer from '../components/molecules/Footer';
 
@@ -20,7 +19,6 @@ function Dashboard() {
         <>
             <HeaderS title={"Dashboard"}/>
             <Div>
-                <FormProducto/>
                 <ContentDash/>
             </Div>
             <Footer/>

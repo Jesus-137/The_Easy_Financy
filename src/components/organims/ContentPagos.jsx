@@ -2,7 +2,7 @@ import SubTitle from '../atoms/Subtitle';
 import InformacionPagoO from '../molecules/InformacionPagoO';
 import InformacionPagoC from '../molecules/InformacionPagoC';
 import StyledLink from '../atoms/Link';
-import Boton from '../atoms/Boton';
+import Boton from '../atoms/BotonF';
 
 function ContentPago() {
     return (
