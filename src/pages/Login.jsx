@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router";
+// import { useContext } from 'react';
+// import UserContext from '../context/UserContext';
 import FormI from '../components/organims/FormI';
 import LogoBig from '../components/atoms/LogoBig';
 import Input from '../components/atoms/Input';
@@ -18,6 +20,7 @@ const Div = styled.div`
 
 
 function Login() {
+    // const {isLoged, setIsLoged} = useContext(UserContext);
     const form= useRef();
     const navigate=useNavigate();
     const [state, setState]=useState([]);
@@ -51,6 +54,7 @@ function Login() {
             //         setState('usuario no encontrado')
             //     }
             // })
+            // setIsLoged(true)
             navigate('/grafica')
         }
     }
@@ -62,7 +66,7 @@ function Login() {
                     <Input data={"Contraceña"} type={"password"} name={"contrasenia"}/>
                     <Boton data={"Aceptar"} onClick={chandlerClick}/>
                     <LinkB data={"¿No tienes cuenta?"} to={"/crear"} link={"Crea una aqui"}/>
-                    <LinkB link={"Recuperar contraseña"} to={"/"}/>
+                    <LinkB link={"Recuperar contraseña"} to={"/recuperar"}/>
                     <Parrafo msn={state}/>
                 </>
             }

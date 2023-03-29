@@ -1,11 +1,9 @@
 import styled from 'styled-components';
-import InformationD from "../molecules/InformationD"
-import InformationI from '../molecules/InformationI';
-import Crecimiento from "../../assets/img/Humans.png";
-import Metas from "../../assets/img/Allura.png";
-import Pagos from "../../assets/img/Pagos.png";
-import Ventas from "../../assets/img/Ventas.png";
+import Information from '../molecules/InformationI';
 import Carusel from '../atoms/Carusel';
+import Afil from "../../assets/img/Women.svg";
+import Sub from "../../assets/img/Stuck.svg";
+import Fran from "../../assets/img/40401.svg";
 
 const StyledInformation = styled.div`
     padding: 16% 2% 0;
@@ -13,6 +11,7 @@ const StyledInformation = styled.div`
     flex-direction: column;
     justify-content: space-between;
     flex-wrap:nowrap;
+    text-align: justify;
     @media screen and (max-width: 800px){
         padding-top: 20%;
     }
@@ -22,10 +21,9 @@ function ContentHome() {
     return (
         <StyledInformation>
             <Carusel/>
-            <InformationD container={"Information"} title={"Crecimiento facil y rapido"} msn={"Has que tus negocios crezcan rápido con un mejor control de sus gastos e ingresos que generas, además de tener una serie de consejos para aumentar tus ingresos y disminuir tus gastos, tomando en cuenta todos los datos y un mejor campo visual."} img={Crecimiento}/>
-            <InformationI container={"Information"} title={"Metas"} msn={"Mira con claridad todo el resultado de todo tu esfuerzo por medio de una gráfica en la que te mostrara que tu meta ya no es imposible."} img={Metas}/>
-            <InformationD container={"Information"} title={"Pagos"} msn={"Olvídate de tener esas vergonzosas conversaciones por olvidarte pagar cualquier cosa, con una cómoda lista, ordenando los pagos más cercanos para que te puedas preparar."} img={Pagos} />
-            <InformationI container={"Information"} title={"Ventas"} msn={"Observa como tus productos son cada vez más o menos vendidos, gracias a una cómoda gráfica, de esta forma si tus ventas bajan podrás hacer algo antes que sea tarde."} img={Ventas}/>
+            <Information container={"Information"} title={"Modelo de negocio de suscripción"} msn={"Este modelo de negocio de suscripción está enfocado en la generación de ingresos de una forma repetitiva, donde el cliente adquiere el producto o servicio periódicamente, por ejemplo Microsoft con Game Pass."} img={Sub}/>
+            <Information container={"Information"} title={"Modelo de negocio afiliación"} msn={"Este modelo de afiliación se aplica en el comercio online, al igual que la tradicional venta por comisión, esto funciona cuando un sitio web redirecciona al lector a otro sitio web (normalmente una tienda online) donde se realiza una serie de acciones (ya sea un registro o una compra) el sitio web que envía el tráfico recibe una compensación monetaria, por ejemplo Amazon."} img={Afil}/>
+            <Information container={"Information"} title={"Modelo de negocio de franquicia o licencia"} msn={"Generalmente, la franquicia se realiza bajo contrato y puntualizando claramente las responsabilidades de ambas partes, la franquicia cede el uso de su marca y la transferencia de sus conocimientos tanto técnicos como administrativos, por otro lado, el franquiciado debe cumplir todos los estándares de calidad y entrenarse de manera adecuada, dando un buen uso de la marca, por ejemplo Burger King."} img={Fran}/>
         </StyledInformation>
     );
 }

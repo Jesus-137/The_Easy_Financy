@@ -24,6 +24,13 @@ const Div = styled.div`
     margin: 3% 0 3% 0;
     display: flex;
     flex-direction: column;
+    justify-content: start;
+    text-align: center;
+  }
+  .logo{
+    width: 60%;
+    position: fixed;
+    text-align: left;
   }
 `;
 
@@ -37,7 +44,10 @@ function FormI({ msn, contentF, form, item1, item2}) {
         {contentF}
       </form>
       <div className='cuatro'>
-        <CuatroFormD item1={item1} item2={item2}/>
+        <div className='logo'>
+          {item1}
+        </div>
+        <CuatroFormD item2={item2}/>
       </div>
     </Div>
   );

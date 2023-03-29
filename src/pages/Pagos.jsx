@@ -6,7 +6,7 @@ function Pagos() {
     return (
         <div>
             <HeaderS title={"Pagos realizados"}/>
-            <ContentPago/>
+                <ContentPago/>
             <Footer/>
         </div>
     );

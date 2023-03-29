@@ -1,15 +1,12 @@
 import styled from 'styled-components';
 import HeaderS from "../components/molecules/HeaderStatic";
-import FormCenterB from '../components/organims/FormCenterB';
-import InputW from '../components/atoms/InputW';
-import Botonlink from '../components/atoms/Botonlink';
-import CuatroFormCenterB from '../components/atoms/CuatroFormCenterB';
+import FormCenterB from "../components/organims/FormCenterB";
+import InputW from "../components/atoms/InputW";
+import Botonlink from "../components/atoms/Botonlink";
+import CuatroFormCenterB from "../components/atoms/CuatroFormCenterB";
 import Footer from "../components/molecules/Footer";
 
 const Div = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     .btn{
         justify-content: space-between;
         display: flex;
@@ -17,14 +14,15 @@ const Div = styled.div`
     }
 `;
 
-function Riesgo() {
+
+function Maquina() {
     return (
         <Div>
-            <HeaderS title={"Riesgo empresarial"}/>
+            <HeaderS title={"Maquinas"}/>
             <FormCenterB contentF={<>
-                <InputW data={"Riesgo Cercano"} type={'text'} name={"riesgoC"}/>
-                <InputW data={"Impacto Economico"} type={'number'} name={"impactoE"}/>
-                <InputW data={"Numero de lugares Afectados "} type={'lugaresA'} name={"mesV"}/>
+                <InputW data={"Folio"} type={'number'} name={"folioM"}/>
+                <InputW data={"Nombre de la Maquina"} type={'text'} name={"nombreM"}/>
+                <InputW data={"Fecha del ultimo mantenimiento"} type={'text'} name={"fechaUltimoMan"}/>
                 <div className='btn'>
                     <Botonlink data={"Registrar"} link={"/"}/>
                     <Botonlink data={"Dashboard"} link={"/"}/>
@@ -39,4 +37,4 @@ function Riesgo() {
     );
 }
 
-export default Riesgo;
+export default Maquina;

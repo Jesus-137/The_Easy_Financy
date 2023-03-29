@@ -1,20 +1,23 @@
 import styled from 'styled-components';
 
 const Div = styled.div`
-    width: 100%;
+    width: 76%;
     display: flex;
     flex-direction: row-reverse;
-    padding: 0 1%;
+    position: relative;
+    left: 300px;
+    /* margin-left:15%; */
     .form{
-        width:51%;
+        width: 50%;
+        margin-bottom: 5%;
         margin-top: 5%;
         z-index: 1;
+        padding: 5%;
         position: static;
         flex-direction: column;
         background-color: white;
         text-align: center;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        padding-bottom: 2%;
     }
     .header{
         display: flex;
@@ -26,33 +29,22 @@ const Div = styled.div`
     .cuatro{
         width: 50%;
     }
-    .logo{
-        width: 20%;
-        position: relative;
-        right: 70%;
-        margin-top: 10%;
-    }
 `;
 
-function FormC({logo, msn, contentF, form, cuatro}) {
+function FormCenterB({ msn, contentF, form, cuatro}) {
   return (
     <Div>
-        <div className='logo'>
-            {logo}
+        <div className='cuatro'>
+            {cuatro}
         </div>
-        <Div>
-            <form ref={form} className='form'>
-                <div className='header'>
-                    {msn}
-                </div>
-                {contentF}
-            </form>
-            <div className='cuatro'>
-                {cuatro}
+        <form ref={form} className='form'>
+            <div className='header'>
+                {msn}
             </div>
-        </Div>
+            {contentF}
+        </form>
     </Div>
   );
 }
 
-export default FormC;
+export default FormCenterB;

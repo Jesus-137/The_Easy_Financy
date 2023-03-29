@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const Div = styled.div`
     width: 52%;
     position: fixed;
+    margin-top: 7%;
     .content{
         width: 100%;
         height: 430px;
@@ -12,10 +13,9 @@ const Div = styled.div`
     }
 `;
 
-function CuatroFormD({item1, item2}) {
+function CuatroFormD({item2}) {
     return (
         <Div>
-            {item1}
             <div className='content'>
                 {item2}
             </div>

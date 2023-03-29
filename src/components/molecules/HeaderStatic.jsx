@@ -1,7 +1,8 @@
 import styled from 'styled-components';
-import Title from '../atoms/Title';
+import TitleW from '../atoms/TitleW';
 import Logo from '../atoms/Logo';
 import Imagen from '../../assets/img/TEF.png';
+import menu from '../../assets/img/menu.svg'
 
 const StyledHeader = styled.header`
     position: static;
@@ -12,13 +13,11 @@ const StyledHeader = styled.header`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    color:white;
     .LogoTEF{
         width: 26%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
         @media screen and (max-width: 700px) {
             width: 30%;
         }
@@ -55,11 +54,18 @@ function HeaderS({title,links}) {
         <StyledHeader>
             <div className='LogoTEF'>
                 <Logo img={Imagen}/>
-                <Title title={'The EasyFinancy'}/>
+                <TitleW title={'The EasyFinancy'}/>
             </div>
-            <Title title={title}/>
+            <TitleW title={title}/>
             <div className='link'>
-                {links}
+                <div class="btn-group">
+                    <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src={menu}/>
+                    </button>
+                    <ul class="dropdown-menu">
+                        {links}
+                    </ul>
+                </div>
             </div>
         </StyledHeader>
     );

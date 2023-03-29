@@ -1,23 +1,24 @@
 import { BrowserRouter,Routes, Route } from "react-router-dom";
 import { useState } from "react";
-// import RouteProtected from "./RouterProtected";
+import RouteProtected from "./RouterProtected";
 import UserContext from "../context/UserContext";
 import HomeView from "../pages/HomeView";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
-// import RealizarPago from "../pages/RealizarPago";
-// import RecuperarCuenta from "../pages/RecuperarCuenta";
-// import CorreoMandado from "../pages/CoreoMandado";
+import RealizarPago from "../pages/RealizarPago";
+import RecuperarCuenta from "../pages/RecuperarCuenta";
+import CorreoMandado from "../pages/CoreoMandado";
 import Dashboard from "../pages/Dashboard";
-// import Ventas from "../pages/Ventas";
-// import Almacen from "../pages/Almacen";
-// import Metas from "../pages/Metas";
-// import Pagos from "../pages/Pagos";
-// import ModeloNegocio from "../pages/ModeloNegocio";
-// import Riesgo from "../pages/Riesgo";
-// import Maquina from "../pages/Maquina";
-// import RegistrarPago from "../pages/RegistrarPagos";
-// import Produccion from "../pages/Produccion";
+import Ventas from "../pages/Ventas";
+import IngresarDatos from "../pages/IngresarDatos";
+import Almacen from "../pages/Almacen";
+import Metas from "../pages/RegitrarMetas";
+import Pagos from "../pages/Pagos";
+import Riesgo from "../pages/Riesgo";
+import RMaquina from "../pages/RegisterMaquina";
+import Maquina from "../pages/Maquina";
+import RegistrarPago from "../pages/RegistrarPagos";
+import Produccion from "../pages/Produccion";
 import NotFound from "../pages/NotFound";
 import PageUseless from "../pages/PageUseless";//mailbox.js.org
 
@@ -30,21 +31,22 @@ function App() {
                     <Route path="/" element={<HomeView/>}/>
                     <Route path="/iniciar" element={<Login/>}/>
                     <Route path="/crear" element={<Register/>}/>
-                    {/* <Route path="/recuperar" element={<RecuperarCuenta/>}/> */}
-                    {/* <Route path="/correo" element={<CorreoMandado/>}/> */}
-                    {/* <Route path="/pagar" element={<RealizarPago/>}/> */}
+                    <Route path="/recuperar" element={<RecuperarCuenta/>}/>
+                    <Route path="/correo" element={<CorreoMandado/>}/>
+                    <Route path="/pagar" element={<RealizarPago/>}/>
                         <Route path="/grafica" element={<Dashboard/>}/>
-                        {/* <Route path="/venta" element={<Ventas/>}/> */}
-                        {/* <Route path="/meta" element={<Metas/>}/> */}
-                        {/* <Route path="/pagos" element={<Pagos/>}/> */}
-                        {/* <Route path="/registrarpago" element={<RegistrarPago/>}/> */}
-                        {/* <Route path="/produccion" element={<Produccion/>}/> */}
-                        {/* <Route path="/modelo" element={<ModeloNegocio/>}/> */}
-                        {/* <Route path="/riesgo" element={<Riesgo/>}/> */}
-                        {/* <Route path="/maquina" element={<Maquina/>}/> */}
-                        {/* <Route path="/almacen" element={<Almacen/>}/> */}
-                    {/* <Route element={<RouteProtected session={isLoged}/>}> */}
-                    {/* </Route> */}
+                        <Route path="/venta" element={<Ventas/>}/>
+                        <Route path="/datos" element={<IngresarDatos/>}/>
+                        <Route path="/meta" element={<Metas/>}/>
+                        <Route path="/pagos" element={<Pagos/>}/>
+                        <Route path="/registrarpago" element={<RegistrarPago/>}/>
+                        <Route path="/produccion" element={<Produccion/>}/>
+                        <Route path="/riesgo" element={<Riesgo/>}/>
+                        <Route path="/rmaquina" element={<RMaquina/>}/>
+                        <Route path="/almacen" element={<Almacen/>}/>
+                        <Route path="/maquina" element={<Maquina/>}/>
+                    <Route element={<RouteProtected session={isLoged}/>}>
+                    </Route>
                     <Route path="/construccion" element={<PageUseless/>}/>
                     <Route path="/*" element={<NotFound/>}/>
                 </Routes>

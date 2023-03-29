@@ -1,12 +1,23 @@
+import styled from 'styled-components';
 import SubTitle from '../atoms/Subtitle';
 import InformacionPagoO from '../molecules/InformacionPagoO';
 import InformacionPagoC from '../molecules/InformacionPagoC';
-import StyledLink from '../atoms/Link';
-import Boton from '../atoms/BotonF';
+import Botonlink from '../atoms/Botonlink';
+
+const Div = styled.div`
+    width: 90%;
+    margin: 5% 5%;
+    .btn{
+        padding: 0;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: row;
+    }
+`;
 
 function ContentPago() {
     return (
-        <div>
+        <Div>
             <SubTitle subTitle={"Pago de internet."}/>
             <InformacionPagoO cantidad={"Cantidad: $759.99"} fecha={"Fecha por pagar: 11/09/2022"}/>
             <SubTitle subTitle={"Pago de los empleados."}/>
@@ -17,9 +28,11 @@ function ContentPago() {
             <InformacionPagoC cantidad={"Cantidad: $759.99"} fecha={"Fecha por pagar: 11/10/2022"}/>
             <SubTitle subTitle={"pago del agua."}/>
             <InformacionPagoO cantidad={"Cantidad: $759.99"} fecha={"Fecha por pagar: 11/10/2022"}/>
-            <StyledLink to="/venta"><Boton data={"Ventas"}/></StyledLink>
-            <StyledLink to="/registrarpago"><Boton data={"Registrar pago"}/></StyledLink>
-        </div>
+            <div className='btn'>
+                <Botonlink data={"Ventas"} link={"/"}/>
+                <Botonlink data={"Registrar pago"} link={"/"}/>
+            </div>
+        </Div>
     );
 }
 

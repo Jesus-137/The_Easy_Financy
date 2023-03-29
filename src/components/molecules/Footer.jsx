@@ -15,10 +15,18 @@ const StyledFooter = styled.footer`
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     .Nosotros{
         margin: 0 3% ;
-        border-top: 5px dashed #000000;
-        border-bottom: 5px dashed #000000;
+    }
+    p{
+        font-family: 'Nunito Sans';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 0.9375rem;
+        line-height: 20px;
+        text-align: center;
+        font-variant: small-caps;
     }
     .redes{
         display: flex;
@@ -41,7 +49,9 @@ function Footer() {
             </div>
             <div className="Nosotros">
                 <SubTitle subTitle={"Sobre nosotros"}/>
-                <Parrafo msn={"Somos una empresa dedicada ayudar a las microempresas Mexicanas con su crecimiento y su progreso para que no sean como la mayoría de las empresas, de esta forma ayudar a que México crecer gracias a las diversas nuevas empresas que podrán crecer con nuestra ayuda."}/>
+                <p>
+                Somos una empresa dedicada ayudar a las microempresas Mexicanas con su crecimiento y su progreso para que no sean como la mayoría de las empresas, de esta forma ayudar a que México crecer gracias a las diversas nuevas empresas que podrán crecer con nuestra ayuda.
+                </p>
             </div>
         </StyledFooter>
     );

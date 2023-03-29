@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 import CuatroFormI from '../atoms/CuatroFormI';
-import Logo from '../atoms/Logo';
-import logo from '../../assets/img/TEF.png';
 
 const Div = styled.div`
   width: 100%;

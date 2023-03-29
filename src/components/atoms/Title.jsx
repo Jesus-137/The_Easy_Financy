@@ -7,6 +7,7 @@ const StyledH1 = styled.h1`
     line-height: 46px;
     font-variant: small;
     font-size: 62.5%;
+    text-align: center;
     @media screen and (min-width: 320px) and (max-width: 400px) {
         font-size: 0.65rem;
     }

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Title from '../atoms/Title';
+import TitleW from '../atoms/TitleW';
 import Logo from '../atoms/Logo';
 import Imagen from '../../assets/img/TEF.png';
 
@@ -27,7 +27,7 @@ const StyledHeader = styled.header`
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        width: 30%;
+        width: 40%;
         @media screen and (max-width: 400px) {
             width: 29%;
         }
@@ -55,9 +55,9 @@ function HeaderF({links}) {
         <StyledHeader>
             <div className='LogoTEF'>
                 <Logo img={Imagen}/>
-                <Title title={'The EasyFinancy'}/>
+                <TitleW title={'The EasyFinancy'}/>
             </div>
-            <Title title={"Home"}/>
+            <TitleW title={"Home"}/>
             <div className='link'>
                 {links}
             </div>

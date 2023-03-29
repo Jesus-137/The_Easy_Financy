@@ -6,7 +6,8 @@ const StyledH3 = styled.h3`
     font-weight: 300;
     line-height: 33px;
     font-variant: small;
-    color: #000;
+    color: #fff;
+    /* text-align: center; */
     font-size: 62.5%;
     @media screen and (min-width: 320px) and (max-width: 400px){
         font-size: 0.65rem;
@@ -22,10 +23,10 @@ const StyledH3 = styled.h3`
     }
 `;
 
-function Parrafo({msn}) {
+function ParrafoW({msn}) {
     return (
         <StyledH3>{msn}</StyledH3>
     );
 }
 
-export default Parrafo;
+export default ParrafoW;

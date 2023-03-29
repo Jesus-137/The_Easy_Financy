@@ -1,4 +1,3 @@
-import { Bar } from "recharts";
 import styled from "styled-components";
 import Grahp from "../atoms/Grahp";
 import SimpleBarCharts from "../atoms/GrahpBara";
@@ -16,13 +15,15 @@ const Div = styled.div`
         flex-direction: row;
         justify-content: space-around;
         text-align: center;
-        width: 100%;
+        width: 75%;
+        border-radius: 31px;
     }
-    .gastos{
+    .row{
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         width: 100%;
+        margin-bottom: 3%;
     }
     @media screen and (min-width: 320px) and (max-width: 700px){
         width: 98%;
@@ -35,6 +36,14 @@ const data = [
     { name: 'Group B', value: 4567 },
 ]
 
+const data2 = [
+    { name: "Group A", value: 300 },
+    { name: 'Group B', value: 4567 },
+    { name: 'Group c', value: 1567 },
+    { name: 'Group d', value: 3567 },
+]
+
+
 function ContentDash() {
     return (
         <Div>
@@ -43,26 +52,20 @@ function ContentDash() {
                 <StyledLinkW>por mes</StyledLinkW>
                 <StyledLinkW>por año</StyledLinkW>
             </div>
-            <div className="gastos">
+            <div className="row">
                 <Grahp data={data} title={"Gastos"}/>
                 <Grahp data={data} title={"Gastos"}/>
                 <Grahp data={data} title={"Gastos"}/>
             </div>
-            <div className="gastos">
-                <SimpleBarCharts bar={
-                    <Bar dataKey="weight" fill='#00D4FF'/>
-                }/>
-                <SimpleBarCharts bar={
-                    <Bar dataKey="weight" fill='#00D4FF'/>
-                }/>
-                <SimpleBarCharts bar={
-                    <Bar dataKey="weight" fill='#00D4FF'/>
-                }/>
+            <div className="row">
+                <SimpleBarCharts/>
+                <SimpleBarCharts/>
+                <SimpleBarCharts/>
             </div>
-            <div className="gastos">
-                <Grahp data={data} title={"Gastos"}/>
-                <Grahp data={data} title={"Gastos"}/>
-                <Grahp data={data} title={"Gastos"}/>
+            <div className="row">
+                <Grahp data={data2} title={"Gastos"}/>
+                <Grahp data={data2} title={"Gastos"}/>
+                <Grahp data={data2} title={"Gastos"}/>
             </div>
         </Div>
     );

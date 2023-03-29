@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Parrafo from "../atoms/Parrafo";
+import ParrafoW from '../atoms/ParrafoW';
 
 const Div = styled.div`
     display: flex;
@@ -7,14 +7,14 @@ const Div = styled.div`
     justify-content: space-between;
     padding: 0 2%;
     background-color: #595F81;
-    color: white;
+    border-radius: 10px;
 `;
 
 function InformacionPagoO({cantidad, fecha}) {
     return (
         <Div>
-            <Parrafo msn={cantidad}/>
-            <Parrafo msn={fecha}/>
+            <ParrafoW msn={cantidad}/>
+            <ParrafoW msn={fecha}/>
         </Div>
     );
 }

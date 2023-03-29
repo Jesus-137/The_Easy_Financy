@@ -6,7 +6,7 @@ const Div = styled.div`
   width: 33%;
 `;
 
-const COLORS = ['#E0E0EA','#FBC235']
+const COLORS = ['#FBC235','#6CE5D6', '#F54B4B', '#00D4FF','#010846']
 
 const Grahp = ({data, title}) => {
   return (
@@ -20,9 +20,11 @@ const Grahp = ({data, title}) => {
                   data={data}
                   innerRadius={60}
                   outerRadius={85}
-                  fill="#E0E0EA"
+                  fill="#6CE5D6"
               >
-                <Cell key={`cell-${2}`} fill={COLORS[1 % COLORS.length]} />
+                {data.map((entry, index) => (
+                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                ))}
               </Pie>
               <Tooltip/>
           </PieChart>

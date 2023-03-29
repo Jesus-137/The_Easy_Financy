@@ -18,14 +18,15 @@ const Div = styled.div`
     }
 `;
 
-function Ventas() {
+function IngresarDatos() {
     return (
         <Div>
-            <HeaderS title={"Ventas"}/>
+            <HeaderS title={"Ingreso de datos"}/>
             <FormCenterB contentF={<>
-                <InputW data={"Folio del producto"} type={'number'} name={"folioP"}/>
-                <InputW data={"Ventas de un mes"} type={'number'} name={"ventaM"}/>
-                <InputW data={"Mes"} type={'text'} name={"mesV"}/>
+                <InputW data={"Nombre del Producto"} type={'text'} name={"folioP"}/>
+                <InputW data={"Precio"} type={'number'} name={"folioP"}/>
+                <InputW data={"Importe General por Dia"} type={'number'} name={"folioP"}/>
+                <InputW data={"Folio"} type={'number'} name={"folioP"}/>
                 <div className='btn'>
                     <Botonlink data={"Registrar"} link={"/"}/>
                     <Botonlink data={"Dashboard"} link={"/"}/>
@@ -40,4 +41,4 @@ function Ventas() {
     );
 }
 
-export default Ventas;
+export default IngresarDatos;

@@ -1,19 +1,45 @@
 import styled from 'styled-components';
-import FormCorreo from '../components/organims/FormCorreo';
+import FormC from '../components/organims/FormC';
+import CuatroFormC from '../components/atoms/CuatroFromC';
+import LogoBig from '../components/atoms/LogoBig';
+import Input from '../components/atoms/Input';
+import Title from '../components/atoms/Title';
+import Parrafo from '../components/atoms/Parrafo';
+import Boton from '../components/atoms/BotonF';
+import logo from '../assets/img/TEF.png';
 
 const Div = styled.div`
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-end;
 `;
 
-function CorreoMandado() {
+
+function Correomandado() {
     return (
         <Div>
-            <FormCorreo/>
+            <FormC contentF={
+                <>
+                    <Input data={"Nueva contraseña"} type={"password"} name={"contraN"}/>
+                    <Input data={"Repetir contraseña"} type={"password"} name={"contraR"}/>
+                    <Boton data={"Aceptar"}/>
+                </>
+            }
+            msn={
+                <>
+                    <Title title={"Bienvenido de nuevo"}/>
+                    <Parrafo msn={"¡Bienvenido de nuevo! Por favor ingrese sus datos"}/>
+                </>
+            }
+            cuatro={
+                <CuatroFormC/>
+            }
+            logo={
+                <LogoBig img={logo}/>
+            }
+            />
         </Div>
     );
 }
 
-export default CorreoMandado;
+export default Correomandado;

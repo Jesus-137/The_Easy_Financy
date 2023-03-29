@@ -14,7 +14,7 @@ const Div = styled.div`
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        text-align: center;
+        text-align: justify;
         @media screen and (min-width: 320px) and (max-width: 520px){
             width: 97%;
         }
@@ -25,7 +25,7 @@ const Div = styled.div`
 `;
 
 
-function Information({title,msn,img, container}) {
+function Information({title,msn,img}) {
     return (
         <Div>
             <div className="information">

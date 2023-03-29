@@ -1,4 +1,4 @@
-import { BarChart, ResponsiveContainer, XAxis } from 'recharts'
+import { BarChart, Bar, Tooltip, ResponsiveContainer, XAxis } from 'recharts'
 
 const data = [
     {name: "María", age: 10, weight: 60, color: "#00D4FF"},
@@ -20,7 +20,8 @@ const SimpleBarCharts = ({bar}) => {
             }}
         >
             <XAxis dataKey="age"/>
-            {bar}
+            <Tooltip />
+            <Bar dataKey="weight" fill='#00D4FF'/>
         </BarChart>
     </ResponsiveContainer>
   )

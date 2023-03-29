@@ -2,10 +2,12 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const StyledLinkW = styled(Link)`
-    font-family: 'Raleway';
+    font-family: 'Arimo', Arial, Helvetica, sans-serif;
     font-style: normal;
-    text-decoration-line: underline;
-    font-variant: all-small-caps;
+    font-weight: 700;
+    line-height: 40px;
+    font-variant: small-caps;
+    text-decoration: none;
     color: white;
     font-size: 62.5%;
     @media screen and (min-width: 320px) and (max-width: 400px) {
@@ -15,7 +17,7 @@ const StyledLinkW = styled(Link)`
         font-size: 0.9rem;
     }
     @media screen and (min-width: 600px) and (max-width: 1500px){
-        font-size: 1.5rem;
+        font-size: 2.1875rem;
     }
     /* @media screen and (min-width: 800px) and (max-width: 1024px){
         font-size: 1rem;

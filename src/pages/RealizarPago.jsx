@@ -1,19 +1,29 @@
-import styled from "styled-components";
-import FormPago from "../components/organims/FormPago";
+import FormC2 from '../components/organims/FromC2';
+import Title from '../components/atoms/Title';
+import Logo from '../components/atoms/Logo';
+import InputW from '../components/atoms/InputW';
+import Boton from '../components/atoms/BotonF';
+import Link from '../components/atoms/Link'
+import CuatroFormC from '../components/atoms/CuatroFromC';
+import logo from '../assets/img/TEF.png';
 
-const Div = styled.div`
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-`;
-
-function RealizarPago() {
+function RecuperarCuenta() {
     return (
-        <Div>
-            <FormPago/>
-        </Div>
+        <FormC2 msn={<>
+                <Logo img={logo}/>
+                <Title title={"Pagar"}/>
+            </>}
+            contentF={<>
+                <InputW data={"Correo Paypal"} type={'email'}/>
+                <InputW data={"Contraseña"} type={'password'}/>
+                <Boton data={"enviar"}/>
+                <Link to={"/iniciar"}>Regresar</Link>
+            </>}
+            cuatro={
+                <CuatroFormC/>
+            }
+        />
     );
 }
 
-export default RealizarPago;
+export default RecuperarCuenta;
