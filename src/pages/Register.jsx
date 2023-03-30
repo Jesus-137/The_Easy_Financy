@@ -24,10 +24,10 @@ function Register() {
     const form= useRef();
     const navigate=useNavigate();
     const [state, setState]=useState([]);
-    const endpoint = 'http://localhost:8080/user/create'
+    const endpoint = 'http://34.203.93.42/user/create'
 
-    const chandlerClick=()=>{
-        // e.preventDefault();
+    const chandlerClick=(e)=>{
+        e.preventDefault();
         const newForm= new FormData (form.current);
         const options = {
             method: 'POST',
@@ -35,11 +35,11 @@ function Register() {
                 'Content-Type':'application/json'
             },
             body:JSON.stringify({
-                contrasenia:newForm.get('contraUsuario'),
-                email:newForm.get('correoUsuario'),
                 nombres: newForm.get('nombreUsuario'),
+                apellidos: newForm.get('apellidoUsuario'),
                 usuario: newForm.get('userUsuario'),
-                apellido: newForm.get('apellidoUsuario')
+                correo_electronico:newForm.get('correoUsuario'),
+                contraseña:newForm.get('contraUsuario'),
             })
         }
         const valors=JSON.parse(options.body)
@@ -65,7 +65,6 @@ function Register() {
             //         alert(data.message)
             //     }
             // })
-            setIsLoged(true)
             navigate('/pagar')
         }
     }

@@ -9,15 +9,23 @@ const StyledH1 = styled.h1`
     font-size: 62.5%;
     text-align: center;
     @media screen and (min-width: 320px) and (max-width: 400px) {
-        font-size: 0.65rem;
+        font-size: 1.25rem;
+        margin: 0;
+        font-weight: 700;
+        font-weight: bold;
     }
     @media screen and (min-width: 400px) and (max-width: 600px){
-        font-size: 0.9rem;
+        margin: 0;
+        font-size: 1.5rem;
+        font-weight: 700;
+        font-weight: bold;
     }
     @media screen and (min-width: 600px) and (max-width: 700px){
+        margin: 0;
         font-size: 1rem;
     }
     @media screen and (min-width: 700px) and (max-width: 1500px){
+        margin: 0;
         font-size: 2.5rem;
     }
 `;

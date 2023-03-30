@@ -5,6 +5,7 @@ import LogoBig from '../components/atoms/LogoBig';
 import Input from '../components/atoms/Input';
 import Title from '../components/atoms/Title';
 import Parrafo from '../components/atoms/Parrafo';
+import StyledLink from '../components/atoms/Link';
 import Boton from '../components/atoms/BotonF';
 import logo from '../assets/img/TEF.png';
 
@@ -22,7 +23,8 @@ function Correomandado() {
                 <>
                     <Input data={"Nueva contraseña"} type={"password"} name={"contraN"}/>
                     <Input data={"Repetir contraseña"} type={"password"} name={"contraR"}/>
-                    <Boton data={"Aceptar"}/>
+                    <Boton data={"Aceptar"} type="button"/>
+                    <StyledLink to={'/recuperar'}>Recuperar</StyledLink>
                 </>
             }
             msn={

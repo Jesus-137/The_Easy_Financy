@@ -12,9 +12,13 @@ const StyledLinkW = styled(Link)`
     font-size: 62.5%;
     @media screen and (min-width: 320px) and (max-width: 400px) {
         font-size: 0.65rem;
+        line-height: 14px;
+        font-weight: 400;
     }
     @media screen and (min-width: 400px) and (max-width: 700px){
         font-size: 0.9rem;
+        line-height: 14px;
+        font-weight: 400;
     }
     @media screen and (min-width: 600px) and (max-width: 1500px){
         font-size: 2.1875rem;

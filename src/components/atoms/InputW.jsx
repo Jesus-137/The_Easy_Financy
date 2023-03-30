@@ -16,7 +16,8 @@ const Div = styled.div`
         height: 50px;
         border-radius: 10px;
         @media screen and (min-width: 320px) and (max-width: 400px) {
-            width: 96%;
+            width: 100%;
+            height: 30px;
         }
     }
     @media screen and (min-width: 320px) and (max-width: 400px) {

@@ -17,10 +17,11 @@ const Div = styled.div`
         padding-left: 2%;
         @media screen and (min-width: 320px) and (max-width: 400px) {
             width: 96%;
+            height: 30px;
         }
     }
     @media screen and (min-width: 320px) and (max-width: 400px) {
-        font-size: 0.65rem;
+        font-size: 0.875rem;
     }
     @media screen and (min-width: 400px){
         font-size: 0.9rem;

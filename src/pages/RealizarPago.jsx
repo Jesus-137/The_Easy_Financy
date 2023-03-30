@@ -16,7 +16,7 @@ function RecuperarCuenta() {
             contentF={<>
                 <InputW data={"Correo Paypal"} type={'email'}/>
                 <InputW data={"Contraseña"} type={'password'}/>
-                <Boton data={"enviar"}/>
+                <Boton data={"enviar"} type="button"/>
                 <Link to={"/iniciar"}>Regresar</Link>
             </>}
             cuatro={

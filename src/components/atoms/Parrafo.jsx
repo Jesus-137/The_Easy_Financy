@@ -9,7 +9,9 @@ const StyledH3 = styled.h3`
     color: #000;
     font-size: 62.5%;
     @media screen and (min-width: 320px) and (max-width: 400px){
-        font-size: 0.65rem;
+        font-size: 0.75rem;
+        line-height: 16px;
+        text-align: justify;
     }
     @media screen and (min-width: 400px){
         font-size: 0.9rem;

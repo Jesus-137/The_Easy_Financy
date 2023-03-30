@@ -46,6 +46,9 @@ const Div = styled.div`
         font-variant: small-caps;
         font-size: 1rem;
     }
+    @media screen and (max-width: 700px){
+        padding: 5%;
+    }
 `;
 
 function Tabla({ columna, placeholder }) {

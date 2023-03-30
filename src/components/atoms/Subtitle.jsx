@@ -6,19 +6,17 @@ const StyledH2 = styled.h2`
     font-variant: all-small-caps;
     text-align: center;
     font-weight: 400;
-    line-height: 36px;
+    line-height: 23px;
     font-size: 62.5%;
-    @media screen and (min-width: 320px) and (max-width: 400px) {
-        font-size: 0.65rem;
-    }
-    @media screen and (min-width: 400px){
-        font-size: 0.9rem;
-    }
-    @media screen and (min-width: 600px) and (max-width: 700px){
-        font-size: 1rem;
+    @media screen and (min-width: 320px) and (max-width: 700px) {
+        font-size: 0.5625rem;
+        font-weight: bold;
+        margin: 0;
     }
     @media screen and (min-width: 700px) and (max-width: 1500px){
-        font-size: 1.94rem;
+        font-size: 1.25rem;
+        font-weight: 700;
+        margin: 0;
     }
 `;
 

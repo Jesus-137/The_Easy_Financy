@@ -11,6 +11,9 @@ const Div = styled.div`
     width:51%;
     display: flex;
     flex-direction: column;
+    @media screen and (min-width: 320px) and (max-width: 700px) {
+      width: 100%;
+    }
   }
   .header{
     display: flex;
@@ -26,19 +29,32 @@ const Div = styled.div`
     flex-direction: column;
     justify-content: start;
     text-align: center;
+    @media screen and (min-width: 320px) and (max-width: 700px){
+      display: none;
+    }
   }
   .logo{
-    width: 60%;
+    width: 70%;
     position: fixed;
     text-align: left;
   }
+  .logoH{
+    width: 30%;
+    position: static;
+    @media screen and (min-width: 700px){
+      display: none;
+    }
+  }
 `;
 
-function FormI({ msn, contentF, form, item1, item2}) {
+function FormD({ msn, contentF, form, item1, item2}) {
   return (
     <Div>
       <form ref={form} className='form'>
         <div className='header'>
+          <div className='logoH'>
+            {item1}
+          </div>
           {msn}
         </div>
         {contentF}
@@ -53,4 +69,4 @@ function FormI({ msn, contentF, form, item1, item2}) {
   );
 }
 
-export default FormI;
+export default FormD;

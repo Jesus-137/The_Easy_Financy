@@ -10,6 +10,7 @@ const Div = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     color: #031CFF;
     @media screen and (min-width: 320px) and (max-width: 400px) {
         font-size: 0.65rem;

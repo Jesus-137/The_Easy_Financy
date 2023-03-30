@@ -7,6 +7,9 @@ const Div = styled.div`
     margin-left: 52%;
     padding: 10% 10%;
     position: fixed;
+    /* @media screen and (min-width: 320px) and (max-width: 700px){
+        display: none;
+    } */
 `;
 
 function CuatroFormC({item}) {

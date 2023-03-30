@@ -10,6 +10,12 @@ const Div = styled.div`
         margin-top: 2%;
         padding-top: 25%;
         background-color: rgba(142, 152, 222, 0.7);
+        @media screen and (min-width: 320px) and (max-width: 700px){
+            display: none;
+        }
+    }
+    @media screen and (min-width: 320px) and (max-width: 700px){
+        display: none;
     }
 `;
 

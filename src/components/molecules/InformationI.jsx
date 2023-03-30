@@ -15,11 +15,11 @@ const Div = styled.div`
         flex-direction: column;
         justify-content: space-evenly;
         text-align: justify;
-        @media screen and (min-width: 320px) and (max-width: 520px){
+        @media screen and (min-width: 320px) and (max-width: 768px){
             width: 97%;
         }
     }
-    @media screen and (min-width: 320px) and (max-width: 520px){
+    @media screen and (min-width: 320px) and (max-width: 768px){
         flex-direction: column-reverse;
     }
 `;

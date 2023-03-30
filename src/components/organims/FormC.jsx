@@ -15,6 +15,10 @@ const Div = styled.div`
         text-align: center;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         padding-bottom: 2%;
+        @media screen and (min-width: 320px) and (max-width: 700px){
+            width: 100%;
+            box-shadow: 0px 0px 0px;
+        }
     }
     .header{
         display: flex;
@@ -25,12 +29,25 @@ const Div = styled.div`
     }
     .cuatro{
         width: 50%;
+        @media screen and (min-width: 320px) and (max-width: 700px){
+            display: none;
+        }
+    }
+    .logoH{
+        width: 60%;
+        position: static;
+        @media screen and (min-width: 700px){
+            display: none;
+        }
     }
     .logo{
         width: 20%;
         position: relative;
         right: 70%;
         margin-top: 10%;
+        @media screen and (min-width: 320px) and (max-width: 700px){
+            display: none;
+        }
     }
 `;
 
@@ -43,6 +60,9 @@ function FormC({logo, msn, contentF, form, cuatro}) {
         <Div>
             <form ref={form} className='form'>
                 <div className='header'>
+                    <div className='logoH'>
+                        {logo}
+                    </div>
                     {msn}
                 </div>
                 {contentF}

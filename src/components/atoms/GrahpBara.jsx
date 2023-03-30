@@ -1,15 +1,15 @@
 import { BarChart, Bar, Tooltip, ResponsiveContainer, XAxis } from 'recharts'
 
 const data = [
-    {name: "María", age: 10, weight: 60, color: "#00D4FF"},
+    {name: "María", age: 10, weight: 60},
     {name: 'Karina', age: 25, weight: 70},
     {name: 'Susana', age: 15, weight: 65},
     {name: 'Pedro', age: 35, weight: 85},
 ]
 
-const SimpleBarCharts = ({bar}) => {
+const SimpleBarCharts = ({width, aspect}) => {
   return (
-    <ResponsiveContainer width="33%" aspect={2.3}>
+    <ResponsiveContainer width={width} aspect={aspect}>
         <BarChart 
             data={data}
             margin={{

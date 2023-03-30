@@ -21,7 +21,8 @@ const Button = styled.button`
     color: white;
     font-size: 62.5%;
     @media screen and (min-width: 320px) and (max-width: 400px) {
-        font-size: 0.65rem;
+        font-size: 1.75rem;
+        padding: 0 3% 0 30%;
     }
     @media screen and (min-width: 400px) and (max-width: 600px) {
         font-size: 0.9rem;

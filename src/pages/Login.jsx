@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { useState, useRef } from "react";
 import { useNavigate } from "react-router";
-// import { useContext } from 'react';
-// import UserContext from '../context/UserContext';
+import { useContext } from 'react';
+import UserContext from '../context/UserContext';
 import FormI from '../components/organims/FormI';
 import LogoBig from '../components/atoms/LogoBig';
 import Input from '../components/atoms/Input';
@@ -20,7 +20,7 @@ const Div = styled.div`
 
 
 function Login() {
-    // const {isLoged, setIsLoged} = useContext(UserContext);
+    const {isLoged, setIsLoged} = useContext(UserContext);
     const form= useRef();
     const navigate=useNavigate();
     const [state, setState]=useState([]);
@@ -33,16 +33,15 @@ function Login() {
         }else if(newForm.get('contrasenia')==''){
             setState('El campo contraseña no puede estar vacio')
         }else{
-            // fetch('http://localhost:8080/user/getAll')
+            // fetch('http://34.203.93.42/user/getAll')
             // .then(response=>response.json())
             // .then(data=>{
             //     const usuarios=data
             //     let i=0;
             //     let encontrado=false
-            //     alert(usuarios[i].nombre_usuario)
             //     while(!encontrado&&i<usuarios.length){
-            //         if (usuarios[i].nombre_usuario==newForm.get('usuario')){
-            //             if(usuarios[i].contrasenia==newForm.get('contrasenia')){
+            //         if (usuarios[i].usuario==newForm.get('usuario')){
+            //             if(usuarios[i].contraseña==newForm.get('contrasenia')){
             //                 setIsLoged(true)
             //                 encontrado=true
             //                 navigate('/grafica')
@@ -54,7 +53,6 @@ function Login() {
             //         setState('usuario no encontrado')
             //     }
             // })
-            // setIsLoged(true)
             navigate('/grafica')
         }
     }
@@ -63,7 +61,7 @@ function Login() {
             <FormI form={form} contentF={
                 <>
                     <Input data={"Nombre de usuario"} type={"text"} name={"usuario"}/>
-                    <Input data={"Contraceña"} type={"password"} name={"contrasenia"}/>
+                    <Input data={"Contraseña"} type={"password"} name={"contrasenia"}/>
                     <Boton data={"Aceptar"} onClick={chandlerClick}/>
                     <LinkB data={"¿No tienes cuenta?"} to={"/crear"} link={"Crea una aqui"}/>
                     <LinkB link={"Recuperar contraseña"} to={"/recuperar"}/>

@@ -1,37 +1,51 @@
 import styled from 'styled-components';
-import Input from '../atoms/Input';
-import Grahp from '../atoms/Grahp';
+import InputBuscar from '../atoms/InputBuscar';
+import SimpleBarCharts from '../atoms/GrahpBara';
 
 const Div = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
     text-align: start;
-    width: 45%;
-    @media screen and (min-width: 320px) and (max-width: 600px){
-        width: 96%;
-        padding: 0 2%;
+    margin-left: 15%;
+    border-radius: 31px;
+    background-color: #9CA9FF;
+    padding-right: 2%;
+    width: 65%;
+    .lista{
+        margin: 3%;
+        width: 35%;
+        background-color: white;
+    }
+    .grahp{
+        margin: 3%;
+        height: 200px;
+        width: 45%;
+        background-color: white;
+    }
+    @media screen and (min-width: 320px) and (max-width: 700px){
+        width: 80%;
+        padding: 10% 0%;
+        justify-content: center;
     }
 `;
 
-
-const data = [
-    { name: "Group A", value: 300 },
-    { name: 'Group B', value: 4567 },
-    { name: 'Group C', value: 1398 },
-    { name: 'Group D', value: 9800 },
-    { name: 'Group E', value: 3908 },
-    { name: 'Group F', value: 4800 },
-]
-
-const COLORS = ['#00FFB2', '#F54B4B', '#010846', '#FBA600', '#E56E00', '#4C0297']
-
 function ContentMeta() {
     return (
-        <Div>
-            <Input data={"Buscar meta"} type={"text"} name={"buscar"}/>
-            <Grahp data={data} COLORS={COLORS}/>
-        </Div>
+        <>
+            <InputBuscar placeholder={"Buscar meta"}/>
+            <Div>
+                <div className='lista'>
+                    <ul>
+                        <li>hola</li>
+                    </ul>
+                </div>
+                <div className='grahp'>
+                    <SimpleBarCharts width={"100%"} aspect={0}/>
+                </div>
+            </Div>
+        </>
     );
 }
 

@@ -7,7 +7,7 @@ const StyledHeader = styled.header`
     position:fixed;
     width: 100%;
     padding: 1% 4% 2% 1%;
-    background-color: rgba(93, 106, 191, 0.87);
+    background: rgba(156, 169, 255, 0.87);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -15,12 +15,15 @@ const StyledHeader = styled.header`
     color:white;
     z-index: 1;
     .LogoTEF{
-        width: 25%;
+        width: 15%;
+        margin-right: 15%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         @media screen and (max-width: 700px) {
-            width: 30%;
+            width: 20%;
+            margin-right: 10%;
         }
     }
     .link{
@@ -28,11 +31,12 @@ const StyledHeader = styled.header`
         flex-direction: row;
         justify-content: space-between;
         width: 40%;
+        align-items: center;
         @media screen and (max-width: 400px) {
-            width: 29%;
+            width: 43%;
         }
         @media screen and (min-width: 400px) and (max-width: 470px){
-            width: 35%;
+            width: 48%;
         }
         @media screen and (min-width: 470px) and (max-width: 500px){
             width: 40%;
@@ -46,6 +50,9 @@ const StyledHeader = styled.header`
         @media screen and (min-width: 640px) and (max-width: 700px){
             width: 30%;
         }
+    }
+    @media screen and (max-width: 400px) {
+        padding: 5%;
     }
 `;
 

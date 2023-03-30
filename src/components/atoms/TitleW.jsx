@@ -9,10 +9,16 @@ const StyledH1 = styled.h1`
     font-size: 62.5%;
     color: white;
     @media screen and (min-width: 320px) and (max-width: 400px) {
-        font-size: 0.65rem;
+        font-size: 0.5rem;
+        font-weight: 700;
+        line-height: 9px;
+        margin: 0;
     }
     @media screen and (min-width: 400px) and (max-width: 600px){
-        font-size: 0.9rem;
+        font-size: 0.7rem;
+        font-weight: 700;
+        line-height: 9px;
+        margin: 0;
     }
     @media screen and (min-width: 600px) and (max-width: 700px){
         font-size: 1rem;

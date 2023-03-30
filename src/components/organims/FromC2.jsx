@@ -4,11 +4,12 @@ const Div = styled.div`
     width: 76%;
     display: flex;
     flex-direction: row-reverse;
-    padding: 0 1%;
+    padding: 0 2%;
     margin: 0 2%;
     .form{
         width:50%;
-        margin-top: 5%;
+        margin-top: 1%;
+        margin-bottom: 2%;
         z-index: 1;
         position: static;
         flex-direction: column;
@@ -16,16 +17,17 @@ const Div = styled.div`
         text-align: center;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         padding-bottom: 2%;
+        @media screen and (min-width: 320px) and (max-width: 700px){
+            width: 700%;
+            margin-top: 50%;
+        }
     }
     .header{
         display: flex;
         flex-direction: row;
-        /* text-align: center; */
+        text-align: center;
         align-items: center;
         margin-bottom: 4%;
-    }
-    .logo{
-        width: 5%;
     }
     .cuatro{
         width: 50%;
@@ -37,9 +39,7 @@ function FormC2({logo, msn, contentF, form, cuatro}) {
     <Div>
         <form ref={form} className='form'>
             <div className='header'>
-                <div className='logo'>
-                    {logo}
-                </div>
+                {logo}
                 {msn}
             </div>
             {contentF}

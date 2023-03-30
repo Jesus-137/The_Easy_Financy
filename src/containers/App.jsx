@@ -12,7 +12,8 @@ import Dashboard from "../pages/Dashboard";
 import Ventas from "../pages/Ventas";
 import IngresarDatos from "../pages/IngresarDatos";
 import Almacen from "../pages/Almacen";
-import Metas from "../pages/RegitrarMetas";
+import RMetas from "../pages/RegitrarMetas";
+import Meta from "../pages/Meta";
 import Pagos from "../pages/Pagos";
 import Riesgo from "../pages/Riesgo";
 import RMaquina from "../pages/RegisterMaquina";
@@ -37,7 +38,8 @@ function App() {
                         <Route path="/grafica" element={<Dashboard/>}/>
                         <Route path="/venta" element={<Ventas/>}/>
                         <Route path="/datos" element={<IngresarDatos/>}/>
-                        <Route path="/meta" element={<Metas/>}/>
+                        <Route path="/rmeta" element={<RMetas/>}/>
+                        <Route path="/meta" element={<Meta/>}/>
                         <Route path="/pagos" element={<Pagos/>}/>
                         <Route path="/registrarpago" element={<RegistrarPago/>}/>
                         <Route path="/produccion" element={<Produccion/>}/>

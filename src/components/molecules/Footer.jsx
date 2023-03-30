@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import Title from "../atoms/Title";
+import SubTitle from '../atoms/Subtitle'
 import Logo from "../atoms/LogoRed";
-import SubTitle from "../atoms/Subtitle";
+import TitleF from "../atoms/TitleF";
 import Parrafo from "../atoms/Parrafo";
 import Facebook from "../../assets/img/Facebook.svg";
 import Twitter from "../../assets/img/Twitter.svg";
@@ -9,7 +9,7 @@ import Instagram from "../../assets/img/Instagram.svg";
 import Gmail from "../../assets/img/Gmail.svg";
 
 const StyledFooter = styled.footer`
-    background-color: rgba(93, 106, 191, 0.87);
+    background: #8893D6;
     margin-top: 5%;
     padding-bottom: 1%;
     display: flex;
@@ -17,7 +17,7 @@ const StyledFooter = styled.footer`
     align-items: center;
     text-align: center;
     .Nosotros{
-        margin: 0 3% ;
+        margin: 3% 3% ;
     }
     p{
         font-family: 'Nunito Sans';
@@ -27,12 +27,24 @@ const StyledFooter = styled.footer`
         line-height: 20px;
         text-align: center;
         font-variant: small-caps;
+        @media screen and (min-width: 320px) and (max-width: 400px){
+            font-size: 0.313rem;
+            font-weight: 300;
+            line-height: 7px;
+            text-align: center;
+            margin: 0;
+        }
     }
     .redes{
         display: flex;
         flex-direction: row;
         justify-content: center;
-        width: 20%;
+        align-items: center;
+        width: 70%;
+        @media screen and (min-width: 400px){
+            width: 40%;
+            margin: 0;
+        }
     }
 `;
 
@@ -40,7 +52,7 @@ const StyledFooter = styled.footer`
 function Footer() {
     return (
         <StyledFooter>
-            <Title title={"Nuestras redes sociales"}/>
+            <TitleF title={"Nuestras redes sociales"}/>
             <div className="redes">
                 <Logo link={"https://www.facebook.com/"} img={Facebook}/>
                 <Logo link={"https://twitter.com/"} img={Twitter}/>

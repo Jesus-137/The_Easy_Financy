@@ -4,7 +4,7 @@ const StiledLink = styled.a`
     width: 20%;
     margin-right: 5%;
     height: 50%;
-    @media screen and (min-width: 320px) {
+    @media screen and (min-width: 320px) and (max-width: 400%){
         width: 100%;
     }
 `;

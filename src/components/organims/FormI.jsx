@@ -10,6 +10,15 @@ const Div = styled.div`
     width: 49%;
     display: flex;
     flex-direction: column;
+    @media screen and (min-width: 320px) and (max-width: 700px) {
+      width: 100%;
+    }
+  }
+  .img{
+    @media screen and (min-width: 700px){
+      width: 1%;
+      display: none;
+    }
   }
   .header{
     display: flex;
@@ -25,6 +34,9 @@ function FormI({img, msn, contentF, form}) {
     <Div>
       <form ref={form} className='form'>
         <div className='header'>
+          <div className='img'>
+            {img}
+          </div>
           {msn}
         </div>
         {contentF}

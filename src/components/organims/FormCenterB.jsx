@@ -6,7 +6,6 @@ const Div = styled.div`
     flex-direction: row-reverse;
     position: relative;
     left: 300px;
-    /* margin-left:15%; */
     .form{
         width: 50%;
         margin-bottom: 5%;
@@ -18,6 +17,10 @@ const Div = styled.div`
         background-color: white;
         text-align: center;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        @media screen and (min-width: 320px) and (max-width: 700px){
+            width: 100%;
+            box-shadow: 0px 0px 0px;
+        }
     }
     .header{
         display: flex;
@@ -28,6 +31,13 @@ const Div = styled.div`
     }
     .cuatro{
         width: 50%;
+        @media screen and (min-width: 320px) and (max-width: 700px){
+            display: none;
+        }
+    }
+    @media screen and (min-width: 320px) and (max-width: 700px){
+        position: static;
+        width: 100%;
     }
 `;
 
